@@ -10,7 +10,7 @@ namespace pharmacyApp.models.Models
     {
         public int Id { get; set; }
         public ApplicationUser UserId { get; set; }
-        public ICollection<Medicincs> Id_Medicincs { get; set; } 
+        public Medicincs medicince { get; set; } 
         public DateTime date { get; set; }
         public string AddressUser { get; set; }
         public string Phone { get; set; }
