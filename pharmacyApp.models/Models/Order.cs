@@ -9,10 +9,10 @@ namespace pharmacyApp.models.Models
     public class Order
     {
         public int Id { get; set; }
-        public ApplicationUser UserId { get; set; }
-        public Medicincs medicince { get; set; } 
+        public ApplicationUser? UserId { get; set; }
+        public Medicincs? medicince { get; set; } 
         public DateTime date { get; set; }
-        public string AddressUser { get; set; }
-        public string Phone { get; set; }
+        public string? AddressUser { get; set; }
+        public string? Phone { get; set; }
     }
 }

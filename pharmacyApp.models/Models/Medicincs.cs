@@ -17,13 +17,13 @@ namespace pharmacyApp.models.Models
     {
         
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public decimal Price { get; set; }
         public int Quantity { get; set; }
         public int NumberOfOrder { get; set; }
         public MedicincsType Type { get; set; }
-        public HashSet<Order> orders { get; set; }
-        public ProducingCompany ProducingCompany { get; set; }
+        public HashSet<Order>? orders { get; set; }
+        public ProducingCompany? ProducingCompany { get; set; }
 
 
     }

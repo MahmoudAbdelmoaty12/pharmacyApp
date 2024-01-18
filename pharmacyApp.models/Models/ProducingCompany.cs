@@ -9,8 +9,8 @@ namespace pharmacyApp.models.Models
     public class ProducingCompany
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public bool Status { get; set; }
-        public ICollection<Medicincs> Medicincs { get; set; }
+        public HashSet<Medicincs>? Medicincs { get; set; }
     }
 }
