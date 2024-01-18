@@ -11,6 +11,7 @@ namespace PharmacyApp.Context.Context
 {
     public class AppDbContext :DbContext
     {
+<<<<<<< HEAD
         public virtual DbSet<ApplicationUser> Users { get; set; }
         public virtual DbSet<Medicincs> Medicincs { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
@@ -32,5 +33,11 @@ namespace PharmacyApp.Context.Context
             
             base.OnModelCreating(modelBuilder);
         }
+=======
+
+
+
+
+>>>>>>> 7b53128a2e3f45c665b02bb3b45b5e8b6619549e
     }
 }
