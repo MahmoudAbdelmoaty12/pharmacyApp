@@ -11,7 +11,6 @@ namespace PharmacyApp.Context.Context
 {
     public class AppDbContext :DbContext
     {
-<<<<<<< HEAD
         public virtual DbSet<ApplicationUser> Users { get; set; }
         public virtual DbSet<Medicincs> Medicincs { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
@@ -19,7 +18,7 @@ namespace PharmacyApp.Context.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source = (localdb)\\mssqllocaldb; Initial Catalog = PharmacyApp; Integrated Security = True; Encrypt = True;encrypt=false");
+            optionsBuilder.UseSqlServer("Data Source=DESKTOP-3LOCF94\\SQLEXPRESS;Initial Catalog=PharmacyApp;Integrated Security=True;TrustServerCertificate=True");
 
             base.OnConfiguring(optionsBuilder);
         }
@@ -33,11 +32,9 @@ namespace PharmacyApp.Context.Context
             
             base.OnModelCreating(modelBuilder);
         }
-=======
 
 
 
 
->>>>>>> 7b53128a2e3f45c665b02bb3b45b5e8b6619549e
     }
 }
