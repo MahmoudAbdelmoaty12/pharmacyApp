@@ -8,5 +8,9 @@ namespace PharmacyApp.Context.Context
 {
     public class AppDbContext
     {
+
+
+
+
     }
 }
