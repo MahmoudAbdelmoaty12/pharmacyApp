@@ -9,10 +9,12 @@ namespace pharmacyApp.Application.Contract
 {
     public interface IApplicationUser:IRepository<ApplicationUser,int>
     {
+      
 
 
-
-
+       
+      
+      
 
     }
 }

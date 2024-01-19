@@ -1,21 +1,4 @@
-<<<<<<< HEAD
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Resources;
-using System.Text;
-using System.Threading.Tasks;
-using pharmacyApp.Application.Contract;
 
-namespace PharmacyApp.Infrastructure.Repositories
-{
-   public  class Repository:IRepository<T,TId>
-    {
-
-
-
-
-=======
 ﻿using Microsoft.EntityFrameworkCore;
 using pharmacyApp.Application.Contract;
 using pharmacyApp.models.Consts;
@@ -32,14 +15,26 @@ namespace PharmacyApp.Infrastructure.Repositories
     public class Repository<T, TId> : IRepository<T, TId> where T : class
     {
         protected AppDbContext _context;
+        DbSet<T> _entity;
         public Repository(AppDbContext context)
         {
             _context = context;
+            _entity = _context.Set<T>();
+        }
+
+        public T Add(T entity)
+        {
+          return  _entity.Add(entity).Entity;
+        }
+
+        public void Delete(T entity)
+        {
+           _entity.Remove(entity);
         }
 
         public IQueryable<T> FindAll(Expression<Func<T, bool>> criteria, int? take, int? skip, Expression<Func<T, object>> orderBy = null, string orderByDirection = "ASC")
         {
-            IQueryable<T> query = _context.Set<T>().Where(criteria);
+            IQueryable<T> query = _entity.Where(criteria);
 
             if (skip.HasValue)
                 query = query.Skip(skip.Value);
@@ -62,12 +57,12 @@ namespace PharmacyApp.Infrastructure.Repositories
 
         public IQueryable<T> GetAll()
         {
-            return _context.Set<T>();
+            return _entity;
         }
 
         public T GetById(TId id)
         {
-            return _context.Set<T>().Find(id);
+            return _entity.Find(id);
         }
 
         public T GetByName(string name)
@@ -80,6 +75,11 @@ namespace PharmacyApp.Infrastructure.Repositories
 
             _context.SaveChanges();
         }
->>>>>>> b8422d34d9c11c9856b35ae6a43a29485444e436
+
+        public T Update(T entity)
+
+        {
+          return  _entity.Update(entity).Entity;
+        }
     }
 }

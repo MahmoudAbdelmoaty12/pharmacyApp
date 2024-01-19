@@ -20,10 +20,10 @@ namespace pharmacyApp.models.Models
         public string? Name { get; set; }
         public decimal Price { get; set; }
         public int Quantity { get; set; }
-        public int NumberOfOrder { get; set; }
+        public int Tapes { get; set; }
         public MedicincsType Type { get; set; }
         public HashSet<Order>? orders { get; set; }
-        public ProducingCompany? ProducingCompany { get; set; }
+        public ProducingCompany? ProducingCompany { get; set; }  
 
 
     }

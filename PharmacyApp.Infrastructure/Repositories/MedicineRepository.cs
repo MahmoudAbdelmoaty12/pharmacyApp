@@ -13,9 +13,14 @@ namespace PharmacyApp.Infrastructure.Repositories
 {
     public class MedicineRepository : Repository<Medicincs, int>,IMedicincs
     {
+        protected AppDbContext _context;
         public MedicineRepository(AppDbContext context)
             : base(context)
-        { }
+        {
+        
+        _context = context;
+        
+        }
 
         public ProducingCompany GetProducingCompany(int MedicineId)
         {
@@ -27,5 +32,6 @@ namespace PharmacyApp.Infrastructure.Repositories
         {
             get { return _context as AppDbContext; }
         }
+
     }
 }
