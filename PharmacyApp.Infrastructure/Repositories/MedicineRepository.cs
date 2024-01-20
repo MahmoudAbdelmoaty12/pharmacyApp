@@ -17,8 +17,8 @@ namespace PharmacyApp.Infrastructure.Repositories
         public MedicineRepository(AppDbContext context)
             : base(context)
         {
-        
-        _context = context;
+         _context = context;
+       
         
         }
 

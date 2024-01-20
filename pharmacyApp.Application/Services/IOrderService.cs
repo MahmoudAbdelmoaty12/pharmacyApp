@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using pharmacyApp.models.Models;
 
-namespace pharmacyApp.Application.Services
+namespace pharmacyApp.Application.Service
 {
-    internal class IOrderService
+    public interface IOrderService
     {
+        Order AddOrder(Order order);
+        void DeleteOrder(Order order);
+        IQueryable<Order> GetAllOrders();
+        Order GetOrder(int id);
+        Order GetOrderName(string name);
+        Order UpdateOrder(Order order);
     }
 }

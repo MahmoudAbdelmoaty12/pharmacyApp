@@ -32,6 +32,11 @@ namespace PharmacyApp.Infrastructure.Repositories
            _entity.Remove(entity);
         }
 
+        public T DeleteById(T entity)
+        {
+            throw new NotImplementedException();
+        }
+
         public IQueryable<T> FindAll(Expression<Func<T, bool>> criteria, int? take, int? skip, Expression<Func<T, object>> orderBy = null, string orderByDirection = "ASC")
         {
             IQueryable<T> query = _entity.Where(criteria);
