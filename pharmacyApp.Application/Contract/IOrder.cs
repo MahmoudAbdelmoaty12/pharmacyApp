@@ -7,10 +7,12 @@ using pharmacyApp.models.Models;
 
 namespace pharmacyApp.Application.Contract
 {
-    public interface IOrder:IRepository<Order,int>
+    public interface IOrder : IRepository<Order, int>
     {
-      //Medicincs  AddOne(Medicincs medicincs);
+        //Medicincs  AddOne(Medicincs medicincs);
         //Medicincs RemoveOne(Medicincs medicincs);
-
+        Order Add(Order order);
+        void Delete(Order order);
+        Order Update(Order order);
     }
 }

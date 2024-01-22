@@ -9,10 +9,9 @@ namespace pharmacyApp.Application.Contract
 {
     public interface IMedicincs:IRepository<Medicincs,int>
     {
-
-
-        public ProducingCompany GetProducingCompany(int MedicineId)
-
-
+        Medicincs Add(Medicincs medicincs);
+        void Delete(Medicincs order);
+        ProducingCompany GetProducingCompany(int MedicineId);
+        Medicincs Update(Medicincs order);
     }
 }
