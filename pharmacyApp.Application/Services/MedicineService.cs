@@ -20,6 +20,7 @@ namespace pharmacyApp.Application.Services
 
         public Medicincs AddMedicine(Medicincs medicincs)
         {
+         
             var add = _medicincs.Add(medicincs);
             _medicincs.Save();
             return add;
@@ -41,7 +42,6 @@ namespace pharmacyApp.Application.Services
 
         public Medicincs UpdateMedicine(Medicincs order)
         {
-
             var delete = _medicincs.Update(order);
             _medicincs.Save();
             return delete;
