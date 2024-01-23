@@ -9,6 +9,6 @@ namespace pharmacyApp.Application.Contract
 {
     public interface IMedicincs:IRepository<Medicincs,int>
     {
-   
+        IQueryable<ProducingCompany> GetProducingCompany(int MedicineId);
     }
 }
