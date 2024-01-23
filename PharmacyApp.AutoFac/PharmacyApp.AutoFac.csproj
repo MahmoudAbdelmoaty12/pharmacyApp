@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\pharmacyApp.Application\pharmacyApp.Application.csproj" />
+    <ProjectReference Include="..\PharmacyApp.Context\PharmacyApp.Context.csproj" />
+    <ProjectReference Include="..\PharmacyApp.Infrastructure\PharmacyApp.Infrastructure.csproj" />
+    <ProjectReference Include="..\pharmacyApp.models\pharmacyApp.models.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -9,7 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac.Mvc5" Version="6.1.0" />
     <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\pharmacyApp.Application\pharmacyApp.Application.csproj" />
+    <ProjectReference Include="..\PharmacyApp.AutoFac\PharmacyApp.AutoFac.csproj" />
   </ItemGroup>
 
   <ItemGroup>
