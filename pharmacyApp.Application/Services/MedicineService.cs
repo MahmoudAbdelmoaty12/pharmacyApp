@@ -53,11 +53,12 @@ namespace pharmacyApp.Application.Services
         public IQueryable<Medicincs> FindAllMedicins(Expression<Func<Medicincs, bool>> criteria, int? take, int? skip, Expression<Func<Medicincs, object>> orderBy = null, string orderByDirection = "ASC")
         {
             return _medicincs.FindAll(criteria, take, skip, orderBy, orderByDirection);
+
         }
-        public ProducingCompany GetCompanyName(int medicineId)
-        {
-            return _medicincs.GetProducingCompany(medicineId);
-        }
+        public ProducingCompany GetCompanyName(int medicineId) => _medicincs.GetProducingCompany(medicineId);
+        
+        public bool IsMedicineValid(Medicincs medicincs) => _medicincs.IsMedicineValid(medicincs);
+        
 
     }
 }

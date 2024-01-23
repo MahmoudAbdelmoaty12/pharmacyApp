@@ -10,5 +10,6 @@ namespace pharmacyApp.Application.Contract
     public interface IMedicincs:IRepository<Medicincs,int>
     {
         public ProducingCompany GetProducingCompany(int MedicineId);
+        public bool IsMedicineValid(Medicincs medicincs);
     }
 }
