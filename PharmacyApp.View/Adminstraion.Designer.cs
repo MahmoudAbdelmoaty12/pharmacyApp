@@ -38,8 +38,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
             label2 = new Label();
             panel3 = new Panel();
@@ -47,14 +45,15 @@
             guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             viewUser = new Guna.UI2.WinForms.Guna2Button();
             BtnAdduser = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             label1 = new Label();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
-            viewUser1 = new ViewUser();
+            uI__ViewUser1 = new UI__ViewUser();
+            updateUser1 = new UpdateUser();
             addUser11 = new Admin.AddUser1();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(components);
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -69,7 +68,6 @@
             panel1.Controls.Add(guna2Button4);
             panel1.Controls.Add(viewUser);
             panel1.Controls.Add(BtnAdduser);
-            panel1.Controls.Add(guna2Button1);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(-2, -1);
@@ -115,7 +113,7 @@
             btnLogout.HoverState.ForeColor = Color.Black;
             btnLogout.Image = (Image)resources.GetObject("btnLogout.Image");
             btnLogout.ImageSize = new Size(40, 40);
-            btnLogout.Location = new Point(29, 592);
+            btnLogout.Location = new Point(29, 568);
             btnLogout.Name = "btnLogout";
             btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnLogout.Size = new Size(225, 56);
@@ -142,12 +140,13 @@
             guna2Button4.HoverState.ForeColor = Color.Black;
             guna2Button4.Image = (Image)resources.GetObject("guna2Button4.Image");
             guna2Button4.ImageSize = new Size(40, 40);
-            guna2Button4.Location = new Point(29, 512);
+            guna2Button4.Location = new Point(29, 472);
             guna2Button4.Name = "guna2Button4";
             guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Button4.Size = new Size(225, 56);
             guna2Button4.TabIndex = 4;
-            guna2Button4.Text = "Profile";
+            guna2Button4.Text = "Update User";
+            guna2Button4.Click += guna2Button4_Click;
             // 
             // viewUser
             // 
@@ -168,7 +167,7 @@
             viewUser.HoverState.ForeColor = Color.Black;
             viewUser.Image = (Image)resources.GetObject("viewUser.Image");
             viewUser.ImageSize = new Size(40, 40);
-            viewUser.Location = new Point(29, 434);
+            viewUser.Location = new Point(29, 378);
             viewUser.Name = "viewUser";
             viewUser.ShadowDecoration.CustomizableEdges = customizableEdges6;
             viewUser.Size = new Size(225, 56);
@@ -195,39 +194,13 @@
             BtnAdduser.HoverState.ForeColor = Color.Black;
             BtnAdduser.Image = (Image)resources.GetObject("BtnAdduser.Image");
             BtnAdduser.ImageSize = new Size(40, 40);
-            BtnAdduser.Location = new Point(29, 347);
+            BtnAdduser.Location = new Point(29, 273);
             BtnAdduser.Name = "BtnAdduser";
             BtnAdduser.ShadowDecoration.CustomizableEdges = customizableEdges8;
             BtnAdduser.Size = new Size(225, 56);
             BtnAdduser.TabIndex = 2;
             BtnAdduser.Text = "Add User";
             BtnAdduser.Click += BtnAdduser_Click;
-            // 
-            // guna2Button1
-            // 
-            guna2Button1.BorderThickness = 2;
-            guna2Button1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            guna2Button1.CheckedState.FillColor = Color.White;
-            guna2Button1.CheckedState.ForeColor = Color.Black;
-            guna2Button1.CustomizableEdges = customizableEdges9;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.FromArgb(64, 64, 64);
-            guna2Button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.HoverState.BorderColor = Color.White;
-            guna2Button1.HoverState.FillColor = Color.FromArgb(0, 118, 225);
-            guna2Button1.HoverState.ForeColor = Color.Black;
-            guna2Button1.Image = (Image)resources.GetObject("guna2Button1.Image");
-            guna2Button1.ImageSize = new Size(50, 50);
-            guna2Button1.Location = new Point(29, 271);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Button1.Size = new Size(225, 56);
-            guna2Button1.TabIndex = 0;
-            guna2Button1.Text = "Dashbord";
             // 
             // label1
             // 
@@ -252,7 +225,8 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(viewUser1);
+            panel2.Controls.Add(uI__ViewUser1);
+            panel2.Controls.Add(updateUser1);
             panel2.Controls.Add(addUser11);
             panel2.Location = new Point(276, 0);
             panel2.Name = "panel2";
@@ -260,23 +234,29 @@
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
             // 
-            // viewUser1
+            // uI__ViewUser1
             // 
-            viewUser1.Location = new Point(-3, -1);
-            viewUser1.Name = "viewUser1";
-            viewUser1.Size = new Size(1102, 772);
-            viewUser1.TabIndex = 1;
+            uI__ViewUser1.Location = new Point(0, 0);
+            uI__ViewUser1.Name = "uI__ViewUser1";
+            uI__ViewUser1.Size = new Size(1102, 772);
+            uI__ViewUser1.TabIndex = 2;
+            // 
+            // updateUser1
+            // 
+            updateUser1.Location = new Point(-4, 0);
+            updateUser1.Name = "updateUser1";
+            updateUser1.Size = new Size(1096, 678);
+            updateUser1.TabIndex = 1;
             // 
             // addUser11
             // 
             addUser11.BackColor = SystemColors.ButtonHighlight;
             addUser11.Font = new Font("Microsoft Sans Serif", 12F);
-            addUser11.Location = new Point(-3, 0);
+            addUser11.Location = new Point(-1, -1);
             addUser11.Margin = new Padding(4);
             addUser11.Name = "addUser11";
-            addUser11.Size = new Size(1105, 769);
+            addUser11.Size = new Size(1102, 772);
             addUser11.TabIndex = 0;
-            addUser11.Load += addUser11_Load_1;
             // 
             // guna2Elipse1
             // 
@@ -285,6 +265,10 @@
             // guna2Elipse2
             // 
             guna2Elipse2.TargetControl = panel2;
+            // 
+            // guna2Elipse3
+            // 
+            guna2Elipse3.TargetControl = panel2;
             // 
             // Adminstraion
             // 
@@ -317,12 +301,13 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button viewUser;
         private Guna.UI2.WinForms.Guna2Button BtnAdduser;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Panel panel3;
         private Label label2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
         private Admin.AddUser1 addUser11;
-        private ViewUser viewUser1;
+        private UpdateUser updateUser1;
+        private UI__ViewUser uI__ViewUser1;
     }
 }

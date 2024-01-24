@@ -48,6 +48,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -67,6 +71,10 @@
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
+            label9 = new Label();
+            guna2TextBox7 = new Guna.UI2.WinForms.Guna2TextBox();
+            label10 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -84,7 +92,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft Sans Serif", 12F);
-            label2.Location = new Point(68, 217);
+            label2.Location = new Point(68, 167);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(90, 25);
@@ -95,7 +103,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft Sans Serif", 12F);
-            label3.Location = new Point(68, 415);
+            label3.Location = new Point(68, 458);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(116, 25);
@@ -106,7 +114,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Microsoft Sans Serif", 12F);
-            label4.Location = new Point(68, 315);
+            label4.Location = new Point(68, 276);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
             label4.Size = new Size(64, 25);
@@ -117,7 +125,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Microsoft Sans Serif", 12F);
-            label5.Location = new Point(68, 493);
+            label5.Location = new Point(68, 564);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
             label5.Size = new Size(70, 25);
@@ -168,7 +176,8 @@
             guna2ComboBox1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2ComboBox1.ForeColor = Color.Black;
             guna2ComboBox1.ItemHeight = 30;
-            guna2ComboBox1.Location = new Point(68, 267);
+            guna2ComboBox1.Items.AddRange(new object[] { "Admin", "User" });
+            guna2ComboBox1.Location = new Point(59, 217);
             guna2ComboBox1.Margin = new Padding(4);
             guna2ComboBox1.Name = "guna2ComboBox1";
             guna2ComboBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
@@ -197,7 +206,7 @@
             guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(68, 366);
+            guna2TextBox1.Location = new Point(59, 306);
             guna2TextBox1.Margin = new Padding(4, 5, 4, 5);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PasswordChar = '\0';
@@ -219,7 +228,7 @@
             guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Location = new Point(68, 523);
+            guna2TextBox2.Location = new Point(59, 601);
             guna2TextBox2.Margin = new Padding(4, 5, 4, 5);
             guna2TextBox2.Name = "guna2TextBox2";
             guna2TextBox2.PasswordChar = '\0';
@@ -301,7 +310,7 @@
             guna2DateTimePicker1.CustomizableEdges = customizableEdges13;
             guna2DateTimePicker1.Font = new Font("Segoe UI", 9F);
             guna2DateTimePicker1.Format = DateTimePickerFormat.Long;
-            guna2DateTimePicker1.Location = new Point(68, 445);
+            guna2DateTimePicker1.Location = new Point(59, 495);
             guna2DateTimePicker1.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             guna2DateTimePicker1.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             guna2DateTimePicker1.Name = "guna2DateTimePicker1";
@@ -361,11 +370,81 @@
             // 
             guna2Elipse1.TargetControl = this;
             // 
+            // guna2TextBox6
+            // 
+            guna2TextBox6.BackColor = SystemColors.ActiveCaptionText;
+            guna2TextBox6.CustomizableEdges = customizableEdges21;
+            guna2TextBox6.DefaultText = "";
+            guna2TextBox6.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            guna2TextBox6.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            guna2TextBox6.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox6.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox6.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox6.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            guna2TextBox6.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox6.Location = new Point(59, 684);
+            guna2TextBox6.Margin = new Padding(4, 5, 4, 5);
+            guna2TextBox6.Name = "guna2TextBox6";
+            guna2TextBox6.PasswordChar = '\0';
+            guna2TextBox6.PlaceholderText = "";
+            guna2TextBox6.SelectedText = "";
+            guna2TextBox6.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            guna2TextBox6.Size = new Size(340, 36);
+            guna2TextBox6.TabIndex = 19;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Microsoft Sans Serif", 12F);
+            label9.Location = new Point(68, 642);
+            label9.Margin = new Padding(4, 0, 4, 0);
+            label9.Name = "label9";
+            label9.Size = new Size(85, 25);
+            label9.TabIndex = 20;
+            label9.Text = "Address";
+            // 
+            // guna2TextBox7
+            // 
+            guna2TextBox7.BackColor = SystemColors.ActiveCaptionText;
+            guna2TextBox7.CustomizableEdges = customizableEdges19;
+            guna2TextBox7.DefaultText = "";
+            guna2TextBox7.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            guna2TextBox7.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            guna2TextBox7.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox7.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox7.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox7.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            guna2TextBox7.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox7.Location = new Point(59, 402);
+            guna2TextBox7.Margin = new Padding(4, 5, 4, 5);
+            guna2TextBox7.Name = "guna2TextBox7";
+            guna2TextBox7.PasswordChar = '\0';
+            guna2TextBox7.PlaceholderText = "";
+            guna2TextBox7.SelectedText = "";
+            guna2TextBox7.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            guna2TextBox7.Size = new Size(340, 36);
+            guna2TextBox7.TabIndex = 21;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Microsoft Sans Serif", 12F);
+            label10.Location = new Point(68, 355);
+            label10.Margin = new Padding(4, 0, 4, 0);
+            label10.Name = "label10";
+            label10.Size = new Size(48, 25);
+            label10.TabIndex = 22;
+            label10.Text = "Age";
+            // 
             // AddUser1
             // 
             AutoScaleDimensions = new SizeF(12F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
+            Controls.Add(label10);
+            Controls.Add(guna2TextBox7);
+            Controls.Add(label9);
+            Controls.Add(guna2TextBox6);
             Controls.Add(guna2Button2);
             Controls.Add(guna2Button1);
             Controls.Add(guna2DateTimePicker1);
@@ -413,5 +492,9 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Label label9;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6;
+        private Label label10;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox7;
     }
 }

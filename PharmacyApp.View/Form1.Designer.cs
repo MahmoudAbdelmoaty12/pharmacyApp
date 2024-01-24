@@ -47,6 +47,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
             guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -65,6 +69,10 @@
             label8 = new Label();
             label7 = new Label();
             label6 = new Label();
+            label9 = new Label();
+            guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
+            guna2TextBox7 = new Guna.UI2.WinForms.Guna2TextBox();
+            label10 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -74,9 +82,9 @@
             label1.Location = new Point(45, 73);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(173, 50);
+            label1.Size = new Size(227, 50);
             label1.TabIndex = 1;
-            label1.Text = "Add User";
+            label1.Text = "Update User";
             // 
             // guna2DateTimePicker1
             // 
@@ -84,7 +92,7 @@
             guna2DateTimePicker1.CustomizableEdges = customizableEdges1;
             guna2DateTimePicker1.Font = new Font("Segoe UI", 9F);
             guna2DateTimePicker1.Format = DateTimePickerFormat.Long;
-            guna2DateTimePicker1.Location = new Point(44, 411);
+            guna2DateTimePicker1.Location = new Point(45, 465);
             guna2DateTimePicker1.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             guna2DateTimePicker1.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             guna2DateTimePicker1.Name = "guna2DateTimePicker1";
@@ -105,7 +113,7 @@
             guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Location = new Point(45, 514);
+            guna2TextBox2.Location = new Point(44, 562);
             guna2TextBox2.Margin = new Padding(4, 5, 4, 5);
             guna2TextBox2.Name = "guna2TextBox2";
             guna2TextBox2.PasswordChar = '\0';
@@ -127,7 +135,7 @@
             guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(44, 317);
+            guna2TextBox1.Location = new Point(44, 296);
             guna2TextBox1.Margin = new Padding(4, 5, 4, 5);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PasswordChar = '\0';
@@ -148,7 +156,8 @@
             guna2ComboBox1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2ComboBox1.ForeColor = Color.Black;
             guna2ComboBox1.ItemHeight = 30;
-            guna2ComboBox1.Location = new Point(44, 218);
+            guna2ComboBox1.Items.AddRange(new object[] { "Admin", "User" });
+            guna2ComboBox1.Location = new Point(45, 197);
             guna2ComboBox1.Margin = new Padding(4);
             guna2ComboBox1.Name = "guna2ComboBox1";
             guna2ComboBox1.ShadowDecoration.CustomizableEdges = customizableEdges8;
@@ -159,7 +168,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft Sans Serif", 12F);
-            label3.Location = new Point(44, 366);
+            label3.Location = new Point(44, 427);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(116, 25);
@@ -170,7 +179,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft Sans Serif", 12F);
-            label2.Location = new Point(44, 168);
+            label2.Location = new Point(55, 168);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(90, 25);
@@ -181,7 +190,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Microsoft Sans Serif", 12F);
-            label4.Location = new Point(45, 271);
+            label4.Location = new Point(44, 255);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
             label4.Size = new Size(64, 25);
@@ -192,7 +201,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Microsoft Sans Serif", 12F);
-            label5.Location = new Point(45, 484);
+            label5.Location = new Point(50, 532);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
             label5.Size = new Size(70, 25);
@@ -353,11 +362,81 @@
             label6.TabIndex = 26;
             label6.Text = "Email ";
             // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Microsoft Sans Serif", 12F);
+            label9.Location = new Point(50, 620);
+            label9.Margin = new Padding(4, 0, 4, 0);
+            label9.Name = "label9";
+            label9.Size = new Size(85, 25);
+            label9.TabIndex = 34;
+            label9.Text = "Address";
+            // 
+            // guna2TextBox6
+            // 
+            guna2TextBox6.BackColor = SystemColors.ActiveCaptionText;
+            guna2TextBox6.CustomizableEdges = customizableEdges19;
+            guna2TextBox6.DefaultText = "";
+            guna2TextBox6.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            guna2TextBox6.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            guna2TextBox6.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox6.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox6.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox6.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            guna2TextBox6.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox6.Location = new Point(44, 660);
+            guna2TextBox6.Margin = new Padding(4, 5, 4, 5);
+            guna2TextBox6.Name = "guna2TextBox6";
+            guna2TextBox6.PasswordChar = '\0';
+            guna2TextBox6.PlaceholderText = "";
+            guna2TextBox6.SelectedText = "";
+            guna2TextBox6.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            guna2TextBox6.Size = new Size(340, 36);
+            guna2TextBox6.TabIndex = 35;
+            // 
+            // guna2TextBox7
+            // 
+            guna2TextBox7.BackColor = SystemColors.ActiveCaptionText;
+            guna2TextBox7.CustomizableEdges = customizableEdges21;
+            guna2TextBox7.DefaultText = "";
+            guna2TextBox7.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            guna2TextBox7.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            guna2TextBox7.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox7.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox7.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox7.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            guna2TextBox7.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox7.Location = new Point(44, 386);
+            guna2TextBox7.Margin = new Padding(4, 5, 4, 5);
+            guna2TextBox7.Name = "guna2TextBox7";
+            guna2TextBox7.PasswordChar = '\0';
+            guna2TextBox7.PlaceholderText = "";
+            guna2TextBox7.SelectedText = "";
+            guna2TextBox7.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            guna2TextBox7.Size = new Size(340, 36);
+            guna2TextBox7.TabIndex = 36;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Microsoft Sans Serif", 12F);
+            label10.Location = new Point(50, 345);
+            label10.Margin = new Padding(4, 0, 4, 0);
+            label10.Name = "label10";
+            label10.Size = new Size(48, 25);
+            label10.TabIndex = 37;
+            label10.Text = "Age";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1102, 772);
+            Controls.Add(label10);
+            Controls.Add(guna2TextBox7);
+            Controls.Add(guna2TextBox6);
+            Controls.Add(label9);
             Controls.Add(guna2Button2);
             Controls.Add(guna2Button1);
             Controls.Add(guna2TextBox5);
@@ -404,5 +483,9 @@
         private Label label8;
         private Label label7;
         private Label label6;
+        private Label label9;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox7;
+        private Label label10;
     }
 }
