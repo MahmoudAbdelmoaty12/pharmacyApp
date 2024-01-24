@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace pharmacyApp.models.Models
 {
+    public enum OrderStatus
+    {
+        Processing,
+        Shipped,
+        Delivered
+    }
     public class Order
     {
         public int Id { get; set; }
@@ -14,5 +20,7 @@ namespace pharmacyApp.models.Models
         public DateTime date { get; set; }
         public string? AddressUser { get; set; }
         public string? Phone { get; set; }
+        public OrderStatus Status { get; set; } = OrderStatus.Processing;
+
     }
 }

@@ -11,6 +11,7 @@ namespace pharmacyApp.Application.Contract
     {
         //Medicincs  AddOne(Medicincs medicincs);
         //Medicincs RemoveOne(Medicincs medicincs);
+        Order UpdateStatus(Order order, OrderStatus orderStatus);
        
     }
 }

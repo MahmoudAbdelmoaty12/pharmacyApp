@@ -1,4 +1,6 @@
-﻿using System;
+﻿using pharmacyApp.Application.Services;
+using pharmacyApp.models.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,11 @@ namespace PharmacyApp.View
 {
     public partial class Registration : Form
     {
-        public Registration()
+        public IApplicationUserService _applicationUserService;
+        public Registration(IApplicationUserService applicationUserService)
         {
             InitializeComponent();
+            _applicationUserService = applicationUserService;
         }
 
         private void Registration_Load(object sender, EventArgs e)
@@ -40,12 +44,19 @@ namespace PharmacyApp.View
 
         private void Btnsignin_Click(object sender, EventArgs e)
         {
-            if(TextUsername.Text=="mostafa"&& TextPassword.Text=="123")
+            ApplicationUser res = _applicationUserService.GetUserByEmail(TextUsername.Text);
+            if (res != null)
             {
-               // Adminstrator adminstrator = new Adminstrator();
-                Adminstraion f = new Adminstraion();
-                f.Show();
-                this.Hide();
+                if(res.Password == TextPassword.Text) 
+                {
+                    Adminstraion f = new Adminstraion();
+                    f.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Wrong Login Please Enter right Email and Password");
+                }
             }
             else
             {
