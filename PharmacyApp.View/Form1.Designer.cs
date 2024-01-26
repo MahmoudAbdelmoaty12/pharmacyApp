@@ -74,7 +74,7 @@
             label1.Name = "label1";
             label1.Size = new Size(140, 41);
             label1.TabIndex = 1;
-            label1.Text = "Add User";
+            label1.Text = "Update User";
             // 
             // PhoneTxt
             // 
