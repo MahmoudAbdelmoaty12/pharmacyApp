@@ -1,35 +1,37 @@
-using pharmacyApp.Application.Services;
+﻿using pharmacyApp.Application.Services;
 using pharmacyApp.models.Models;
-using System.Xml.Linq;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PharmacyApp.View
 {
-    public partial class Form1 : Form
+    public partial class RegisterUser : Form
     {
-        private  IApplicationUserService _userService;
-        
-        public Form1(IApplicationUserService userService)
+        private IApplicationUserService _userService;
+        public RegisterUser(IApplicationUserService userService)
         {
             InitializeComponent();
             _userService = userService;
             PasswordTxt.PasswordChar = '*';
 
         }
-
-        //private void Form1_Load(object sender, EventArgs e)
-        //{
-
-        //}
         private bool IsPhoneNumberValid(string phoneNumber)
         {
             foreach (char digit in phoneNumber)
             {
                 if (!char.IsDigit(digit))
                 {
-                    return false; // If any character is not a digit, the phone number is invalid
+                    return false; 
                 }
             }
-            return true; // All characters are digits, so the phone number is valid
+            return true; 
         }
         private ApplicationUserType GetUserType(string userType)
         {
@@ -41,8 +43,7 @@ namespace PharmacyApp.View
             {
                 return ApplicationUserType.user;
             }
-            // Handle other cases if needed
-            return ApplicationUserType.user; // Default to user type if not recognized
+            return ApplicationUserType.user; 
         }
         private void guna2Button1_Click(object sender, EventArgs e)
         {
@@ -56,7 +57,7 @@ namespace PharmacyApp.View
             string phoneNumber = PhoneTxt.Text;
             string? userType = userTypeComboBox.SelectedItem?.ToString();
 
-            if (name.Length > 5 && password.Length > 8 && email.Contains("@") && isAgeValid && age > 21 && IsPhoneNumberValid(phoneNumber)&&!string.IsNullOrEmpty(userType))
+            if (name.Length > 3 && password.Length > 8 && email.Contains("@") && isAgeValid && age > 21 && IsPhoneNumberValid(phoneNumber) && !string.IsNullOrEmpty(userType))
             {
                 ApplicationUser newUser = new ApplicationUser
                 {
@@ -81,12 +82,12 @@ namespace PharmacyApp.View
             {
                 MessageBox.Show("Registration failed. Please check the input values and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        
+
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-           NameTxt.Clear();
+            NameTxt.Clear();
             EmailTxt.Clear();
             PhoneTxt.Clear();
             PasswordTxt.Clear();

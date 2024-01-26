@@ -1,8 +1,7 @@
-using Autofac;
-using Autofac.Integration.Mvc;
 using pharmacyApp.Application.Contract;
 using pharmacyApp.Application.Services;
-using System.Web.Mvc;
+using PharmacyApp.Context.Context;
+using PharmacyApp.Infrastructure.Repositories;
 
 namespace PharmacyApp.View
 {
@@ -15,23 +14,25 @@ namespace PharmacyApp.View
 
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            //  Application.EnableVisualStyles();
+            //  Application.SetCompatibleTextRenderingDefault(false);
 
-            // Build the Autofac container
-            var builder = new ContainerBuilder();
-            builder.RegisterModule(new AutofacModule());
-            var container = builder.Build();
+            //  // Build the Autofac container
+            //  var builder = new ContainerBuilder();
+            //  builder.RegisterModule(new AutofacModule());
+            //  var container = builder.Build();
 
-            // Set up the DependencyResolver
-            var resolver = new AutofacDependencyResolver(container);
-            DependencyResolver.SetResolver(resolver);
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
-          // Application.Run(new Registration());
-            //Application.Run(new Adminstraion());
-            Application.Run(new Form1(container.Resolve<IApplicationUserService>()));
+            //  // Set up the DependencyResolver
+            //  var resolver = new AutofacDependencyResolver(container);
+            //  DependencyResolver.SetResolver(resolver);
+            //  // To customize application configuration such as set high DPI settings or default font,
+            //  // see https://aka.ms/applicationconfiguration.
+            //  ApplicationConfiguration.Initialize();
+            //// Application.Run(new Registration());
+            //  //Application.Run(new Adminstraion());
+            //  Application.Run(new Form1(container.Resolve<IApplicationUserService>()));
+            Application.Run(new RegisterUser(new ApplicationUserService(new ApplicationUserRepository(new AppDbContext()))));
+          
         }
     }
 }
