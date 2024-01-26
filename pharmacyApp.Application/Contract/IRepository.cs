@@ -18,8 +18,8 @@ namespace pharmacyApp.Application.Contract
 
         T GetById(TId id);
         T GetByName(string name);
-            IQueryable<T> FindAll(Expression<Func<T, bool>> criteria, int? take, int? skip,
-            Expression<Func<T, object>> orderBy = null, string orderByDirection = OrderBy.Ascending);
+        IQueryable<T> FindAll(Expression<Func<T, bool>> criteria, int? take, int? skip,
+        Expression<Func<T, object>> orderBy = null, string orderByDirection = OrderBy.Ascending);
         IQueryable<T> GetAll();
         void Save();
 

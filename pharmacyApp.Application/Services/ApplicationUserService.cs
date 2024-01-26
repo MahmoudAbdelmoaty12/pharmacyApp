@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace pharmacyApp.Application.Services
 {
@@ -49,5 +50,9 @@ namespace pharmacyApp.Application.Services
             return _applicationUser.GetByName(name);
         }
 
+        public ApplicationUser GetUserByEmail(string email)
+        {
+            return _applicationUser.FindAll(User => User.Email == email, 1, 0).SingleOrDefault();
+        }
     }
 }

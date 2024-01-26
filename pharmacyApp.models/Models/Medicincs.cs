@@ -22,6 +22,8 @@ namespace pharmacyApp.models.Models
         public int Quantity { get; set; }
         public int Tapes { get; set; }
         public MedicincsType Type { get; set; }
+        public DateTime? ProductionDate { get; set; }
+        public DateTime? ExpirationDate { get; set; }
         public HashSet<Order>? orders { get; set; }
         public ProducingCompany? ProducingCompany { get; set; }  
 

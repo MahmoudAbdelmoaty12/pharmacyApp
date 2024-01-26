@@ -15,8 +15,24 @@ namespace PharmacyApp.Infrastructure.Repositories
         public OrderRepository(AppDbContext context)
            : base(context)
         { }
-  
-        
+
+        public Order UpdateStatus(Order order, OrderStatus orderStatus)
+        {
+            try
+            {
+                var res = _context.Orders.Where(or => or.Id == order.Id).SingleOrDefault();
+                res.Status = orderStatus;
+                _context.SaveChanges();
+                return res;
+            }
+            catch (Exception ex) 
+            {
+                return null;
+            }
+           
+        }
+
+
 
         //public Medicincs AddOne(Medicincs medicincs)
         //{

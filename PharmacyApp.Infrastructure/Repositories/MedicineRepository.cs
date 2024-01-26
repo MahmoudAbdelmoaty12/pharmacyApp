@@ -28,6 +28,21 @@ namespace PharmacyApp.Infrastructure.Repositories
             return (Medicine.ProducingCompany != null)?Medicine.ProducingCompany:new ProducingCompany();
 
         }
+
+        public bool IsMedicineValid(Medicincs medicincs)
+        {
+            DateTime? ExpireDate = medicincs.ExpirationDate;
+            try
+            {
+                if (ExpireDate.Value > DateTime.UtcNow) { return false; }
+                else { return true; }
+            }
+            catch (Exception ex) 
+            {
+                return true;
+            }
+        }
+
         private AppDbContext AppDbContext
         {
             get { return _context as AppDbContext; }

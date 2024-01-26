@@ -12,5 +12,6 @@ namespace pharmacyApp.Application.Services
         Medicincs GetMedicine(int id);
         Medicincs GetMedicineName(string name);
         Medicincs UpdateMedicine(Medicincs order);
+        public bool IsMedicineValid(Medicincs medicincs);
     }
 }
