@@ -44,24 +44,32 @@ namespace PharmacyApp.View
 
         private void Btnsignin_Click(object sender, EventArgs e)
         {
-            ApplicationUser res = _applicationUserService.GetUserByEmail(TextUsername.Text);
-            if (res != null)
+            try
             {
-                if(res.Password == TextPassword.Text) 
+                ApplicationUser res = _applicationUserService.GetUserByEmail(TextUsername.Text);
+                if (res != null)
                 {
-                    Adminstraion f = new Adminstraion();
-                    f.Show();
-                    this.Hide();
+                    if (res.Password == TextPassword.Text)
+                    {
+                        Adminstraion f = new Adminstraion();
+                        f.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Wrong Login Please Enter right Email and Password");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Wrong Login Please Enter right Email and Password");
+                    MessageBox.Show("wrong username or passowrd", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show("wrong username or passowrd","Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message);
             }
+            
         }
     }
 }

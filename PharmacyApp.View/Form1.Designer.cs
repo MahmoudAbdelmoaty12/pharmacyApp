@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
             PhoneTxt = new Guna.UI2.WinForms.Guna2TextBox();
             NameTxt = new Guna.UI2.WinForms.Guna2TextBox();
@@ -72,14 +72,14 @@
             label1.Location = new Point(39, 55);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(140, 41);
+            label1.Size = new Size(183, 41);
             label1.TabIndex = 1;
             label1.Text = "Update User";
             // 
             // PhoneTxt
             // 
             PhoneTxt.BackColor = SystemColors.ActiveCaptionText;
-            PhoneTxt.CustomizableEdges = customizableEdges17;
+            PhoneTxt.CustomizableEdges = customizableEdges1;
             PhoneTxt.DefaultText = "";
             PhoneTxt.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             PhoneTxt.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -94,14 +94,14 @@
             PhoneTxt.PasswordChar = '\0';
             PhoneTxt.PlaceholderText = "";
             PhoneTxt.SelectedText = "";
-            PhoneTxt.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            PhoneTxt.ShadowDecoration.CustomizableEdges = customizableEdges2;
             PhoneTxt.Size = new Size(298, 27);
             PhoneTxt.TabIndex = 21;
             // 
             // NameTxt
             // 
             NameTxt.BackColor = SystemColors.ActiveCaptionText;
-            NameTxt.CustomizableEdges = customizableEdges19;
+            NameTxt.CustomizableEdges = customizableEdges3;
             NameTxt.DefaultText = "";
             NameTxt.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             NameTxt.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -116,7 +116,7 @@
             NameTxt.PasswordChar = '\0';
             NameTxt.PlaceholderText = "";
             NameTxt.SelectedText = "";
-            NameTxt.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            NameTxt.ShadowDecoration.CustomizableEdges = customizableEdges4;
             NameTxt.Size = new Size(298, 27);
             NameTxt.TabIndex = 20;
             // 
@@ -166,7 +166,7 @@
             // 
             guna2Button2.BorderRadius = 19;
             guna2Button2.BorderThickness = 1;
-            guna2Button2.CustomizableEdges = customizableEdges21;
+            guna2Button2.CustomizableEdges = customizableEdges5;
             guna2Button2.DisabledState.BorderColor = Color.DarkGray;
             guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -181,7 +181,7 @@
             guna2Button2.Location = new Point(735, 403);
             guna2Button2.Margin = new Padding(3, 2, 3, 2);
             guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2Button2.Size = new Size(125, 33);
             guna2Button2.TabIndex = 33;
             guna2Button2.Text = "Reset";
@@ -191,7 +191,7 @@
             // 
             guna2Button1.BorderRadius = 19;
             guna2Button1.BorderThickness = 1;
-            guna2Button1.CustomizableEdges = customizableEdges23;
+            guna2Button1.CustomizableEdges = customizableEdges7;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -206,7 +206,7 @@
             guna2Button1.Location = new Point(563, 403);
             guna2Button1.Margin = new Padding(3, 2, 3, 2);
             guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2Button1.Size = new Size(129, 33);
             guna2Button1.TabIndex = 32;
             guna2Button1.Text = "Sign Up";
@@ -215,7 +215,7 @@
             // AddressTxt
             // 
             AddressTxt.BackColor = SystemColors.ActiveCaptionText;
-            AddressTxt.CustomizableEdges = customizableEdges25;
+            AddressTxt.CustomizableEdges = customizableEdges9;
             AddressTxt.DefaultText = "";
             AddressTxt.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             AddressTxt.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -230,14 +230,14 @@
             AddressTxt.PasswordChar = '\0';
             AddressTxt.PlaceholderText = "";
             AddressTxt.SelectedText = "";
-            AddressTxt.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            AddressTxt.ShadowDecoration.CustomizableEdges = customizableEdges10;
             AddressTxt.Size = new Size(298, 27);
             AddressTxt.TabIndex = 31;
             // 
             // PasswordTxt
             // 
             PasswordTxt.BackColor = SystemColors.ActiveCaptionText;
-            PasswordTxt.CustomizableEdges = customizableEdges27;
+            PasswordTxt.CustomizableEdges = customizableEdges11;
             PasswordTxt.DefaultText = "";
             PasswordTxt.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             PasswordTxt.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -252,14 +252,14 @@
             PasswordTxt.PasswordChar = '\0';
             PasswordTxt.PlaceholderText = "";
             PasswordTxt.SelectedText = "";
-            PasswordTxt.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            PasswordTxt.ShadowDecoration.CustomizableEdges = customizableEdges12;
             PasswordTxt.Size = new Size(298, 27);
             PasswordTxt.TabIndex = 30;
             // 
             // EmailTxt
             // 
             EmailTxt.BackColor = SystemColors.ActiveCaptionText;
-            EmailTxt.CustomizableEdges = customizableEdges29;
+            EmailTxt.CustomizableEdges = customizableEdges13;
             EmailTxt.DefaultText = "";
             EmailTxt.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             EmailTxt.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -274,7 +274,7 @@
             EmailTxt.PasswordChar = '\0';
             EmailTxt.PlaceholderText = "";
             EmailTxt.SelectedText = "";
-            EmailTxt.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            EmailTxt.ShadowDecoration.CustomizableEdges = customizableEdges14;
             EmailTxt.Size = new Size(298, 27);
             EmailTxt.TabIndex = 29;
             // 
@@ -314,7 +314,7 @@
             // AgeTxt
             // 
             AgeTxt.BackColor = SystemColors.ActiveCaptionText;
-            AgeTxt.CustomizableEdges = customizableEdges31;
+            AgeTxt.CustomizableEdges = customizableEdges15;
             AgeTxt.DefaultText = "";
             AgeTxt.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             AgeTxt.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -329,7 +329,7 @@
             AgeTxt.PasswordChar = '\0';
             AgeTxt.PlaceholderText = "";
             AgeTxt.SelectedText = "";
-            AgeTxt.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            AgeTxt.ShadowDecoration.CustomizableEdges = customizableEdges16;
             AgeTxt.Size = new Size(298, 27);
             AgeTxt.TabIndex = 34;
             // 
@@ -347,7 +347,7 @@
             // userTypeComboBox
             // 
             userTypeComboBox.FormattingEnabled = true;
-            userTypeComboBox.Items.AddRange(new object[] { "Admin ", "Patient" });
+            userTypeComboBox.Items.AddRange(new object[] { "admin", "patient" });
             userTypeComboBox.Location = new Point(38, 168);
             userTypeComboBox.Name = "userTypeComboBox";
             userTypeComboBox.Size = new Size(299, 23);
@@ -380,7 +380,6 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             Text = "Form1";
-            //Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }

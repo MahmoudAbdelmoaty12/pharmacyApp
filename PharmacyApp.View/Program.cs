@@ -14,6 +14,7 @@ namespace PharmacyApp.View
 
         static void Main()
         {
+            ApplicationConfiguration.Initialize();
             //  Application.EnableVisualStyles();
             //  Application.SetCompatibleTextRenderingDefault(false);
 
@@ -31,8 +32,9 @@ namespace PharmacyApp.View
             //// Application.Run(new Registration());
             //  //Application.Run(new Adminstraion());
             //  Application.Run(new Form1(container.Resolve<IApplicationUserService>()));
-            Application.Run(new RegisterUser(new ApplicationUserService(new ApplicationUserRepository(new AppDbContext()))));
-          
+            //Application.Run(new Form1(new ApplicationUserService(new ApplicationUserRepository(new AppDbContext()))));
+            //Application.Run( new UI_AddMedicine(new MedicineService(new MedicineRepository(new AppDbContext()))));
+            Application.Run(new MedicineForm());
         }
     }
 }
