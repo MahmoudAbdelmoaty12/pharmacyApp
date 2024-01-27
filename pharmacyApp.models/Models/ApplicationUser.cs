@@ -5,10 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace pharmacyApp.models.Models
-
-  
-
-
 {
     public enum ApplicationUserType
     {

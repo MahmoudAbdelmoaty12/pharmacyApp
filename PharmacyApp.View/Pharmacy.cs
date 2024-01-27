@@ -1,4 +1,5 @@
-﻿using System;
+﻿using pharmacyApp.Application.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace PharmacyApp.View
 {
     public partial class Pharmacy : Form
     {
+        private IApplicationUserService applicationUserService;
         public Pharmacy()
         {
             InitializeComponent();
@@ -19,7 +21,7 @@ namespace PharmacyApp.View
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
-            Registration re = new Registration();
+            Registration re = new Registration(applicationUserService);
             re.Show();
             this.Hide();
         }

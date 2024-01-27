@@ -30,45 +30,38 @@ namespace PharmacyApp.View
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "RegisterUser";
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
-            PhoneTxt = new Guna.UI2.WinForms.Guna2TextBox();
-            NameTxt = new Guna.UI2.WinForms.Guna2TextBox();
+            PhoneTxt = new Guna2TextBox();
+            NameTxt = new Guna2TextBox();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
             panel2 = new Panel();
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            AddressTxt = new Guna.UI2.WinForms.Guna2TextBox();
-            PasswordTxt = new Guna.UI2.WinForms.Guna2TextBox();
-            EmailTxt = new Guna.UI2.WinForms.Guna2TextBox();
+            guna2Button2 = new Guna2Button();
+            guna2Button1 = new Guna2Button();
+            AddressTxt = new Guna2TextBox();
+            PasswordTxt = new Guna2TextBox();
+            EmailTxt = new Guna2TextBox();
             label8 = new Label();
             label7 = new Label();
             label6 = new Label();
-            AgeTxt = new Guna.UI2.WinForms.Guna2TextBox();
-            label2 = new Label();
-            userTypeComboBox = new ComboBox();
+            AgeTxt = new Guna2TextBox();
             SuspendLayout();
             // 
             // label1
@@ -78,14 +71,14 @@ namespace PharmacyApp.View
             label1.Location = new Point(39, 55);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(140, 41);
+            label1.Size = new Size(196, 41);
             label1.TabIndex = 1;
-            label1.Text = "Add User";
+            label1.Text = "Registeration";
             // 
             // PhoneTxt
             // 
             PhoneTxt.BackColor = SystemColors.ActiveCaptionText;
-            PhoneTxt.CustomizableEdges = customizableEdges17;
+            PhoneTxt.CustomizableEdges = customizableEdges1;
             PhoneTxt.DefaultText = "";
             PhoneTxt.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             PhoneTxt.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -94,20 +87,20 @@ namespace PharmacyApp.View
             PhoneTxt.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             PhoneTxt.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             PhoneTxt.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            PhoneTxt.Location = new Point(39, 386);
+            PhoneTxt.Location = new Point(38, 344);
             PhoneTxt.Margin = new Padding(4);
             PhoneTxt.Name = "PhoneTxt";
             PhoneTxt.PasswordChar = '\0';
             PhoneTxt.PlaceholderText = "";
             PhoneTxt.SelectedText = "";
-            PhoneTxt.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            PhoneTxt.ShadowDecoration.CustomizableEdges = customizableEdges2;
             PhoneTxt.Size = new Size(298, 27);
             PhoneTxt.TabIndex = 21;
             // 
             // NameTxt
             // 
             NameTxt.BackColor = SystemColors.ActiveCaptionText;
-            NameTxt.CustomizableEdges = customizableEdges19;
+            NameTxt.CustomizableEdges = customizableEdges3;
             NameTxt.DefaultText = "";
             NameTxt.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             NameTxt.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -116,13 +109,13 @@ namespace PharmacyApp.View
             NameTxt.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             NameTxt.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             NameTxt.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            NameTxt.Location = new Point(38, 238);
+            NameTxt.Location = new Point(38, 150);
             NameTxt.Margin = new Padding(4);
             NameTxt.Name = "NameTxt";
             NameTxt.PasswordChar = '\0';
             NameTxt.PlaceholderText = "";
             NameTxt.SelectedText = "";
-            NameTxt.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            NameTxt.ShadowDecoration.CustomizableEdges = customizableEdges4;
             NameTxt.Size = new Size(298, 27);
             NameTxt.TabIndex = 20;
             // 
@@ -130,7 +123,7 @@ namespace PharmacyApp.View
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft Sans Serif", 12F);
-            label3.Location = new Point(38, 274);
+            label3.Location = new Point(38, 208);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(38, 20);
@@ -141,7 +134,7 @@ namespace PharmacyApp.View
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Microsoft Sans Serif", 12F);
-            label4.Location = new Point(39, 203);
+            label4.Location = new Point(38, 126);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
             label4.Size = new Size(51, 20);
@@ -152,7 +145,7 @@ namespace PharmacyApp.View
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Microsoft Sans Serif", 12F);
-            label5.Location = new Point(39, 363);
+            label5.Location = new Point(39, 320);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
             label5.Size = new Size(55, 20);
@@ -172,7 +165,7 @@ namespace PharmacyApp.View
             // 
             guna2Button2.BorderRadius = 19;
             guna2Button2.BorderThickness = 1;
-            guna2Button2.CustomizableEdges = customizableEdges21;
+            guna2Button2.CustomizableEdges = customizableEdges5;
             guna2Button2.DisabledState.BorderColor = Color.DarkGray;
             guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -182,12 +175,11 @@ namespace PharmacyApp.View
             guna2Button2.ForeColor = Color.White;
             guna2Button2.HoverState.FillColor = Color.White;
             guna2Button2.HoverState.ForeColor = Color.FromArgb(0, 118, 225);
-            guna2Button2.Image = (Image)resources.GetObject("guna2Button2.Image");
             guna2Button2.ImageSize = new Size(30, 30);
             guna2Button2.Location = new Point(735, 403);
             guna2Button2.Margin = new Padding(3, 2, 3, 2);
             guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2Button2.Size = new Size(125, 33);
             guna2Button2.TabIndex = 33;
             guna2Button2.Text = "Reset";
@@ -197,7 +189,7 @@ namespace PharmacyApp.View
             // 
             guna2Button1.BorderRadius = 19;
             guna2Button1.BorderThickness = 1;
-            guna2Button1.CustomizableEdges = customizableEdges23;
+            guna2Button1.CustomizableEdges = customizableEdges7;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -207,12 +199,11 @@ namespace PharmacyApp.View
             guna2Button1.ForeColor = Color.White;
             guna2Button1.HoverState.FillColor = Color.White;
             guna2Button1.HoverState.ForeColor = Color.FromArgb(0, 118, 225);
-            guna2Button1.Image = (Image)resources.GetObject("guna2Button1.Image");
             guna2Button1.ImageSize = new Size(30, 30);
             guna2Button1.Location = new Point(563, 403);
             guna2Button1.Margin = new Padding(3, 2, 3, 2);
             guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2Button1.Size = new Size(129, 33);
             guna2Button1.TabIndex = 32;
             guna2Button1.Text = "Sign Up";
@@ -221,7 +212,7 @@ namespace PharmacyApp.View
             // AddressTxt
             // 
             AddressTxt.BackColor = SystemColors.ActiveCaptionText;
-            AddressTxt.CustomizableEdges = customizableEdges25;
+            AddressTxt.CustomizableEdges = customizableEdges9;
             AddressTxt.DefaultText = "";
             AddressTxt.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             AddressTxt.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -236,14 +227,14 @@ namespace PharmacyApp.View
             AddressTxt.PasswordChar = '\0';
             AddressTxt.PlaceholderText = "";
             AddressTxt.SelectedText = "";
-            AddressTxt.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            AddressTxt.ShadowDecoration.CustomizableEdges = customizableEdges10;
             AddressTxt.Size = new Size(298, 27);
             AddressTxt.TabIndex = 31;
             // 
             // PasswordTxt
             // 
             PasswordTxt.BackColor = SystemColors.ActiveCaptionText;
-            PasswordTxt.CustomizableEdges = customizableEdges27;
+            PasswordTxt.CustomizableEdges = customizableEdges11;
             PasswordTxt.DefaultText = "";
             PasswordTxt.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             PasswordTxt.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -258,14 +249,14 @@ namespace PharmacyApp.View
             PasswordTxt.PasswordChar = '\0';
             PasswordTxt.PlaceholderText = "";
             PasswordTxt.SelectedText = "";
-            PasswordTxt.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            PasswordTxt.ShadowDecoration.CustomizableEdges = customizableEdges12;
             PasswordTxt.Size = new Size(298, 27);
             PasswordTxt.TabIndex = 30;
             // 
             // EmailTxt
             // 
             EmailTxt.BackColor = SystemColors.ActiveCaptionText;
-            EmailTxt.CustomizableEdges = customizableEdges29;
+            EmailTxt.CustomizableEdges = customizableEdges13;
             EmailTxt.DefaultText = "";
             EmailTxt.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             EmailTxt.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -280,7 +271,7 @@ namespace PharmacyApp.View
             EmailTxt.PasswordChar = '\0';
             EmailTxt.PlaceholderText = "";
             EmailTxt.SelectedText = "";
-            EmailTxt.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            EmailTxt.ShadowDecoration.CustomizableEdges = customizableEdges14;
             EmailTxt.Size = new Size(298, 27);
             EmailTxt.TabIndex = 29;
             // 
@@ -320,7 +311,7 @@ namespace PharmacyApp.View
             // AgeTxt
             // 
             AgeTxt.BackColor = SystemColors.ActiveCaptionText;
-            AgeTxt.CustomizableEdges = customizableEdges31;
+            AgeTxt.CustomizableEdges = customizableEdges15;
             AgeTxt.DefaultText = "";
             AgeTxt.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             AgeTxt.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -329,43 +320,21 @@ namespace PharmacyApp.View
             AgeTxt.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             AgeTxt.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AgeTxt.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            AgeTxt.Location = new Point(38, 313);
+            AgeTxt.Location = new Point(38, 232);
             AgeTxt.Margin = new Padding(4);
             AgeTxt.Name = "AgeTxt";
             AgeTxt.PasswordChar = '\0';
             AgeTxt.PlaceholderText = "";
             AgeTxt.SelectedText = "";
-            AgeTxt.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            AgeTxt.ShadowDecoration.CustomizableEdges = customizableEdges16;
             AgeTxt.Size = new Size(298, 27);
             AgeTxt.TabIndex = 34;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 12F);
-            label2.Location = new Point(38, 126);
-            label2.Margin = new Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(80, 20);
-            label2.TabIndex = 35;
-            label2.Text = "User Role";
-            // 
-            // userTypeComboBox
-            // 
-            userTypeComboBox.FormattingEnabled = true;
-            userTypeComboBox.Items.AddRange(new object[] { "Admin ", "Patient" });
-            userTypeComboBox.Location = new Point(38, 168);
-            userTypeComboBox.Name = "userTypeComboBox";
-            userTypeComboBox.Size = new Size(299, 23);
-            userTypeComboBox.TabIndex = 36;
-            // 
-            // Form1
+            // RegisterUser
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(964, 579);
-            Controls.Add(userTypeComboBox);
-            Controls.Add(label2);
             Controls.Add(AgeTxt);
             Controls.Add(guna2Button2);
             Controls.Add(guna2Button1);
@@ -384,9 +353,8 @@ namespace PharmacyApp.View
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
-            Name = "Form1";
+            Name = "RegisterUser";
             Text = "Form1";
-            //Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -409,8 +377,6 @@ namespace PharmacyApp.View
         private Label label7;
         private Label label6;
         private Guna.UI2.WinForms.Guna2TextBox AgeTxt;
-        private Label label2;
-        private ComboBox userTypeComboBox;
     }
 
 }

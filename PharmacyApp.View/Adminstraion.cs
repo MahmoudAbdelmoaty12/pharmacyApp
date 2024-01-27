@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
+using pharmacyApp.Application.Services;
 using PharmacyApp.View.Admin;
 
 namespace PharmacyApp.View
 {
     public partial class Adminstraion : Form
     {
+        private IApplicationUserService applicationUserService;
         public Adminstraion()
         {
             InitializeComponent();
@@ -22,7 +24,7 @@ namespace PharmacyApp.View
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
-            Registration re=new Registration();
+            Registration re=new Registration(applicationUserService);
             re.Show();
             this.Hide();
 

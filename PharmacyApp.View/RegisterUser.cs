@@ -55,9 +55,8 @@ namespace PharmacyApp.View
             int age;
             bool isAgeValid = int.TryParse(AgeTxt.Text, out age);
             string phoneNumber = PhoneTxt.Text;
-            string? userType = userTypeComboBox.SelectedItem?.ToString();
 
-            if (name.Length > 3 && password.Length > 8 && email.Contains("@") && isAgeValid && age > 21 && IsPhoneNumberValid(phoneNumber) && !string.IsNullOrEmpty(userType))
+            if (name.Length > 3 && password.Length > 8 && email.Contains("@") && isAgeValid && age > 21 && IsPhoneNumberValid(phoneNumber))
             {
                 ApplicationUser newUser = new ApplicationUser
                 {
@@ -67,7 +66,7 @@ namespace PharmacyApp.View
                     Address = address,
                     Age = age,
                     PhoneNumber = phoneNumber,
-                    Type = GetUserType(userType)
+                    Type = GetUserType("Patient")
                 };
 
                 _userService.AddUser(newUser);
