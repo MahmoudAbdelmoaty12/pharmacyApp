@@ -1,5 +1,6 @@
 ﻿using pharmacyApp.Application.Services;
 using pharmacyApp.models.Models;
+using PharmacyApp.View.registerUser;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -47,7 +48,7 @@ namespace PharmacyApp.View
             ApplicationUser res = _applicationUserService.GetUserByEmail(TextUsername.Text);
             if (res != null)
             {
-                if(res.Password == TextPassword.Text) 
+                if (res.Password == TextPassword.Text)
                 {
                     Adminstraion f = new Adminstraion();
                     f.Show();
@@ -60,8 +61,15 @@ namespace PharmacyApp.View
             }
             else
             {
-                MessageBox.Show("wrong username or passowrd","Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("wrong username or passowrd", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            RegisterUser register_User = new RegisterUser(_applicationUserService);
+            register_User.Show();
+            this.Hide();
         }
     }
 }
