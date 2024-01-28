@@ -122,7 +122,7 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(0, 118, 225);
-            panel2.Location = new Point(508, 168);
+            panel2.Location = new Point(613, 170);
             panel2.Name = "panel2";
             panel2.Size = new Size(4, 500);
             panel2.TabIndex = 3;
@@ -130,7 +130,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(833, 88);
+            pictureBox2.Location = new Point(935, 170);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(85, 103);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -141,7 +141,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label2.Location = new Point(826, 204);
+            label2.Location = new Point(935, 276);
             label2.Name = "label2";
             label2.Size = new Size(92, 32);
             label2.TabIndex = 5;
@@ -152,7 +152,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label3.Location = new Point(699, 241);
+            label3.Location = new Point(794, 309);
             label3.Name = "label3";
             label3.Size = new Size(94, 21);
             label3.TabIndex = 6;
@@ -162,7 +162,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label4.Location = new Point(699, 328);
+            label4.Location = new Point(794, 396);
             label4.Name = "label4";
             label4.Size = new Size(82, 21);
             label4.TabIndex = 6;
@@ -180,7 +180,7 @@
             TextUsername.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             TextUsername.Font = new Font("Segoe UI", 9F);
             TextUsername.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            TextUsername.Location = new Point(700, 275);
+            TextUsername.Location = new Point(795, 343);
             TextUsername.Margin = new Padding(3, 4, 3, 4);
             TextUsername.Name = "TextUsername";
             TextUsername.PasswordChar = '\0';
@@ -202,7 +202,7 @@
             TextPassword.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             TextPassword.Font = new Font("Segoe UI", 9F);
             TextPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            TextPassword.Location = new Point(700, 361);
+            TextPassword.Location = new Point(795, 429);
             TextPassword.Margin = new Padding(3, 4, 3, 4);
             TextPassword.Name = "TextPassword";
             TextPassword.PasswordChar = '*';
@@ -229,10 +229,10 @@
             Btnsignin.HoverState.ForeColor = Color.FromArgb(0, 118, 225);
             Btnsignin.Image = (Image)resources.GetObject("Btnsignin.Image");
             Btnsignin.ImageSize = new Size(30, 30);
-            Btnsignin.Location = new Point(722, 431);
+            Btnsignin.Location = new Point(746, 485);
             Btnsignin.Name = "Btnsignin";
             Btnsignin.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            Btnsignin.Size = new Size(147, 45);
+            Btnsignin.Size = new Size(180, 45);
             Btnsignin.TabIndex = 9;
             Btnsignin.Text = "Sign in";
             Btnsignin.Click += Btnsignin_Click;
@@ -254,10 +254,10 @@
             Btnreset.HoverState.ForeColor = Color.FromArgb(0, 118, 225);
             Btnreset.Image = (Image)resources.GetObject("Btnreset.Image");
             Btnreset.ImageSize = new Size(30, 30);
-            Btnreset.Location = new Point(889, 431);
+            Btnreset.Location = new Point(1000, 485);
             Btnreset.Name = "Btnreset";
             Btnreset.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            Btnreset.Size = new Size(155, 45);
+            Btnreset.Size = new Size(180, 45);
             Btnreset.TabIndex = 10;
             Btnreset.Text = "Reset";
             Btnreset.Click += Btnreset_Click;
@@ -291,8 +291,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(1190, 591);
-            Controls.Add(guna2Button2);
+            ClientSize = new Size(1213, 591);
             Controls.Add(Btnreset);
             Controls.Add(Btnsignin);
             Controls.Add(TextPassword);
