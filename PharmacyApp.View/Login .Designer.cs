@@ -291,7 +291,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(1213, 591);
+            ClientSize = new Size(1213, 600);
             Controls.Add(Btnreset);
             Controls.Add(Btnsignin);
             Controls.Add(TextPassword);
