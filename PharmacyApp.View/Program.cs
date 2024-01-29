@@ -31,8 +31,10 @@ namespace PharmacyApp.View
             //// Application.Run(new Registration());
             //  //Application.Run(new Adminstraion());
             //  Application.Run(new Form1(container.Resolve<IApplicationUserService>()));
+            //Application.Run(new Form1(new ApplicationUserService(new ApplicationUserRepository(new AppDbContext()))));
+            //Application.Run( new UI_AddMedicine(new MedicineService(new MedicineRepository(new AppDbContext()))));
+            //Application.Run(new MedicineForm());
             Application.Run(new Registration(new ApplicationUserService(new ApplicationUserRepository(new AppDbContext()))));
-          
         }
     }
 }
