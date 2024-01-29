@@ -48,7 +48,7 @@
             label1 = new Label();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
-            uI__ViewUser1 = new UI__ViewUser();
+            //uI__ViewUser1 = new UI__ViewUser();
             updateUser1 = new UpdateUser();
             addUser11 = new Admin.AddUser1();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);

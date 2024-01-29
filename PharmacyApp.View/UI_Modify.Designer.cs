@@ -95,6 +95,7 @@
             guna2Button2.Size = new Size(146, 48);
             guna2Button2.TabIndex = 31;
             guna2Button2.Text = "Reset";
+            guna2Button2.Click += guna2Button2_Click;
             // 
             // guna2Button1
             // 
@@ -116,6 +117,7 @@
             guna2Button1.Size = new Size(146, 48);
             guna2Button1.TabIndex = 30;
             guna2Button1.Text = "Update";
+            guna2Button1.Click += guna2Button1_Click;
             // 
             // guna2TextBox5
             // 
@@ -351,6 +353,7 @@
             guna2Button3.Size = new Size(146, 33);
             guna2Button3.TabIndex = 34;
             guna2Button3.Text = "search";
+            guna2Button3.Click += guna2Button3_Click;
             // 
             // label9
             // 
