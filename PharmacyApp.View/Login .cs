@@ -45,30 +45,42 @@ namespace PharmacyApp.View
 
         private void Btnsignin_Click(object sender, EventArgs e)
         {
+            ApplicationUser res = _applicationUserService.GetUserByEmail(TextUsername.Text);
             try
             {
-                ApplicationUser res = _applicationUserService.GetUserByEmail(TextUsername.Text);
                 if (res != null)
                 {
-                    if (res.Password == TextPassword.Text)
+                    if (res.Type == ApplicationUserType.admin)
                     {
-                        Adminstraion f = new Adminstraion();
-                        f.Show();
-                        this.Hide();
+                        if (res.Password == TextPassword.Text)
+                        {
+                            Adminstraion f = new Adminstraion();
+                            f.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Wrong Login Please Enter right Email and Password");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Wrong Login Please Enter right Email and Password");
+                        if (res.Password == TextPassword.Text)
+                        {
+                            Pharmacy f = new Pharmacy();
+                            f.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Wrong Login Please Enter right Email and Password");
+                        }
                     }
-                }
-                else
-                {
-                    MessageBox.Show("wrong username or passowrd", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("wrong username or passowrd", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
