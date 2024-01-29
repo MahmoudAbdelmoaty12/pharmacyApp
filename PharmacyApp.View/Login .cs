@@ -1,5 +1,6 @@
 ﻿using pharmacyApp.Application.Services;
 using pharmacyApp.models.Models;
+using PharmacyApp.View.registerUser;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -70,6 +71,13 @@ namespace PharmacyApp.View
                 MessageBox.Show(ex.Message);
             }
             
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            RegisterUser register_User = new RegisterUser(_applicationUserService);
+            register_User.Show();
+            this.Hide();
         }
     }
 }

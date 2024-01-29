@@ -77,7 +77,7 @@ namespace PharmacyApp.View
                 registration.Show();
                 this.Hide();
             }
-            else
+            else 
             {
                 MessageBox.Show("Registration failed. Please check the input values and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
