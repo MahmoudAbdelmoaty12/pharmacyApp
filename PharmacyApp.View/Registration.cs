@@ -51,7 +51,7 @@ namespace PharmacyApp.View
                 {
                     if (res.Password == TextPassword.Text)
                     {
-                        Adminstraion f = new Adminstraion();
+                        Adminstraion f = new Adminstraion(this);
                         f.Show();
                         this.Hide();
                     }

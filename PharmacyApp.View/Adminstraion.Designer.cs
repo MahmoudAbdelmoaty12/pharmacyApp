@@ -1,7 +1,10 @@
-﻿namespace PharmacyApp.View
+﻿using pharmacyApp.Application.Services;
+
+namespace PharmacyApp.View
 {
     partial class Adminstraion
     {
+        
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -28,6 +31,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            
             components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Adminstraion));
@@ -48,7 +52,7 @@
             label1 = new Label();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
-            //uI__ViewUser1 = new UI__ViewUser();
+            uI__ViewUser1 = new UI__ViewUser(_applicationUserService);
             updateUser1 = new UpdateUser();
             addUser11 = new Admin.AddUser1();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);

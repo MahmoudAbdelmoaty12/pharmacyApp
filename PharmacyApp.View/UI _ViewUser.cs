@@ -20,9 +20,16 @@ namespace PharmacyApp.View
             InitializeComponent();
             _applicationUserService = applicationUserService;
         }
+        //public delegate void DataChangedEventHandler(object sender, DataChangedEventArgs e);
+        //public event DataChangedEventHandler OnDataChanged;
+
+        //public void RaiseDataChangedEvent(string textValue, int numberValue)
+        //{
+        //    OnDataChanged?.Invoke(this, new DataChangedEventArgs(textValue, numberValue));
+        //}
         private void LoadUserData()
         {
-            var Users = _applicationUserService.GetAllUsers().ToList();
+            var Users = _applicationUserService.GetAllUsers()?.ToHashSet();
 
 
             guna2DataGridView1.AutoGenerateColumns = true;
