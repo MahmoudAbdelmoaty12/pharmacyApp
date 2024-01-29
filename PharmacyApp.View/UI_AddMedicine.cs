@@ -15,7 +15,7 @@ using System.Windows.Forms;
 
 namespace PharmacyApp.View
 {
- 
+
     public partial class UI_AddMedicine : UserControl
     {
         private IMedicineService _medicineService;
@@ -48,7 +48,7 @@ namespace PharmacyApp.View
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             string name = Nametxt.Text;
-            int tapes =int.Parse(tapestxt.Text);
+            int tapes = int.Parse(tapestxt.Text);
             DateTime valid = guna2DateTimePicker1.Value;
             DateTime expire = guna2DateTimePicker2.Value;
             int quntity = int.Parse(Quantitytxt.Text);
@@ -68,6 +68,15 @@ namespace PharmacyApp.View
 
             _medicineService.AddMedicine(medicincs);
             MessageBox.Show("Medicine Added successfully!");
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            Nametxt.Clear();
+            tapestxt.Clear();
+            Quantitytxt.Clear();
+            Pricetxt.Clear();
+
         }
     }
 }

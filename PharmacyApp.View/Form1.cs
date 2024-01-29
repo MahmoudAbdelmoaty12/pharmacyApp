@@ -55,7 +55,7 @@ namespace PharmacyApp.View
             string phoneNumber = PhoneTxt.Text;
             string? userType = userTypeComboBox.SelectedItem?.ToString();
 
-            if (name.Length > 5 && password.Length > 8 && email.Contains("@") && isAgeValid && age > 21 && IsPhoneNumberValid(phoneNumber)&&!string.IsNullOrEmpty(userType))
+            if (name.Length > 3 && password.Length > 8 && email.Contains("@") && isAgeValid && age > 21 && IsPhoneNumberValid(phoneNumber)&&!string.IsNullOrEmpty(userType))
             {
                 ApplicationUser newUser = new ApplicationUser
                 {

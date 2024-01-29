@@ -52,9 +52,9 @@
             // 
             ViewUser.AutoSize = true;
             ViewUser.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            ViewUser.Location = new Point(68, 55);
+            ViewUser.Location = new Point(60, 41);
             ViewUser.Name = "ViewUser";
-            ViewUser.Size = new Size(120, 31);
+            ViewUser.Size = new Size(101, 25);
             ViewUser.TabIndex = 0;
             ViewUser.Text = "View User";
             // 
@@ -69,14 +69,13 @@
             guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.Font = new Font("Segoe UI", 9F);
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(376, 109);
-            guna2TextBox1.Margin = new Padding(3, 4, 3, 4);
+            guna2TextBox1.Location = new Point(329, 82);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PasswordChar = '\0';
             guna2TextBox1.PlaceholderText = "";
             guna2TextBox1.SelectedText = "";
             guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2TextBox1.Size = new Size(286, 46);
+            guna2TextBox1.Size = new Size(250, 34);
             guna2TextBox1.TabIndex = 1;
             // 
             // guna2DataGridView1
@@ -91,7 +90,8 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            guna2DataGridView1.ColumnHeadersHeight = 4;
+            guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -101,11 +101,13 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             guna2DataGridView1.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.Location = new Point(43, 220);
+            guna2DataGridView1.Location = new Point(38, 165);
+            guna2DataGridView1.Margin = new Padding(3, 2, 3, 2);
             guna2DataGridView1.Name = "guna2DataGridView1";
             guna2DataGridView1.RowHeadersVisible = false;
             guna2DataGridView1.RowHeadersWidth = 51;
-            guna2DataGridView1.Size = new Size(1023, 328);
+            guna2DataGridView1.RowTemplate.Height = 29;
+            guna2DataGridView1.Size = new Size(895, 246);
             guna2DataGridView1.TabIndex = 56;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -118,7 +120,7 @@
             guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
             guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
             guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
             guna2DataGridView1.ThemeStyle.ReadOnly = false;
             guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = Color.White;
@@ -145,10 +147,11 @@
             guna2Button2.HoverState.ForeColor = Color.FromArgb(0, 118, 225);
             guna2Button2.Image = (Image)resources.GetObject("guna2Button2.Image");
             guna2Button2.ImageSize = new Size(30, 30);
-            guna2Button2.Location = new Point(835, 594);
+            guna2Button2.Location = new Point(731, 446);
+            guna2Button2.Margin = new Padding(3, 2, 3, 2);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button2.Size = new Size(147, 44);
+            guna2Button2.Size = new Size(129, 33);
             guna2Button2.TabIndex = 57;
             guna2Button2.Text = "Delete";
             // 
@@ -168,12 +171,14 @@
             guna2Button3.HoverState.ForeColor = Color.FromArgb(0, 118, 225);
             guna2Button3.Image = (Image)resources.GetObject("guna2Button3.Image");
             guna2Button3.ImageSize = new Size(30, 30);
-            guna2Button3.Location = new Point(684, 111);
+            guna2Button3.Location = new Point(598, 83);
+            guna2Button3.Margin = new Padding(3, 2, 3, 2);
             guna2Button3.Name = "guna2Button3";
             guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button3.Size = new Size(147, 44);
+            guna2Button3.Size = new Size(129, 33);
             guna2Button3.TabIndex = 58;
             guna2Button3.Text = "Search";
+            guna2Button3.Click += guna2Button3_Click;
             // 
             // guna2Elipse1
             // 
@@ -181,15 +186,17 @@
             // 
             // UI__ViewUser
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(guna2Button3);
             Controls.Add(guna2Button2);
             Controls.Add(guna2DataGridView1);
             Controls.Add(guna2TextBox1);
             Controls.Add(ViewUser);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "UI__ViewUser";
-            Size = new Size(1102, 772);
+            Size = new Size(964, 579);
+            Load += UI__ViewUser_Load;
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

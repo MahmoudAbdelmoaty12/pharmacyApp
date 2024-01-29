@@ -304,6 +304,7 @@
             guna2Button2.Size = new Size(146, 48);
             guna2Button2.TabIndex = 16;
             guna2Button2.Text = "Reset";
+            guna2Button2.Click += guna2Button2_Click;
             // 
             // guna2Elipse1
             // 

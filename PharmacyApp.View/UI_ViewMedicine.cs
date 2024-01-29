@@ -32,7 +32,7 @@ namespace PharmacyApp.View
         }
         private void LoadMedicineData()
         {
-            var medicines = _medicineService.GetAllMedicins().ToList();
+            var medicines = _medicineService.GetAllMedicins().ToHashSet();
 
 
             guna2DataGridView1.AutoGenerateColumns = true;
