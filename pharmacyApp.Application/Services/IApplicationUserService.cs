@@ -8,7 +8,7 @@ namespace pharmacyApp.Application.Services
         ApplicationUser AddUser(ApplicationUser user);
         void DeleteUser(ApplicationUser user);
         IQueryable<ApplicationUser> GetAllUsers();
-        IQueryable<ApplicationUser> FindAllUsers(Expression<Func<Medicincs, bool>> criteria, int? take, int? skip, Expression<Func<Medicincs, object>> orderBy = null, string orderByDirection = "ASC");
+        IQueryable<ApplicationUser> FindAllUsers(Expression<Func<ApplicationUser, bool>> criteria, int? take, int? skip, Expression<Func<ApplicationUser, object>> orderBy = null, string orderByDirection = "ASC");
         ApplicationUser GetUser(int id);
         ApplicationUser GetUserName(string name);
         ApplicationUser GetUserByEmail(string email);

@@ -41,20 +41,7 @@ namespace PharmacyApp.View
 
         private void SearchUserData(string searchQuery)
         {
-            /*var Users = _applicationUserService.FindAllUsers(
-                user => user.Name.Contains(searchQuery),
-                take: null,
-                skip: null,
-                orderBy: null,
-                orderByDirection: "ASC"
-            ).ToList();
-            
-
-            guna2DataGridView1.AutoGenerateColumns = true;
-            guna2DataGridView1.DataSource = Users;
-            guna2DataGridView1.Refresh();*/
-            //_Users.Contains(user => user.Name == searchQuery);
-            var Users = _Users.FindAll(user => user.Name.Equals(searchQuery, StringComparison.OrdinalIgnoreCase));
+            var Users = _Users.FindAll(user => user.Name.Contains(searchQuery, StringComparison.OrdinalIgnoreCase));
             guna2DataGridView1.AutoGenerateColumns = true;
             guna2DataGridView1.DataSource = Users;
             guna2DataGridView1.Refresh();

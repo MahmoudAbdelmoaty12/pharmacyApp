@@ -15,7 +15,7 @@ namespace PharmacyApp.View
     {
         //private IMedicineService _medicineService;
         //private IApplicationUserService _userService;
-        public Pharmacy()
+        public Pharmacy(Registration registration)
         {
             InitializeComponent();
             //_medicineService = medicineService;

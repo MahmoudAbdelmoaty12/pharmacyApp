@@ -47,18 +47,34 @@ namespace PharmacyApp.View
         {
             try
             {
-                ApplicationUser res = _applicationUserService.GetUserByEmail(TextUsername.Text);
+                ApplicationUser res = _applicationUserService.GetUserByEmail(TextUsername.Text.ToLower());
                 if (res != null)
                 {
-                    if (res.Password == TextPassword.Text)
+                    if (res.Type == ApplicationUserType.admin)
                     {
-                        Adminstraion f = new Adminstraion(this);
-                        f.Show();
-                        this.Hide();
+                        if (res.Password == TextPassword.Text)
+                        {
+                            Adminstraion f = new Adminstraion(this);
+                            f.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Wrong Login Please Enter right Email and Password");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Wrong Login Please Enter right Email and Password");
+                        if (res.Password == TextPassword.Text)
+                        {
+                            Pharmacy f = new Pharmacy(this);
+                            f.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Wrong Login Please Enter right Email and Password");
+                        }
                     }
                 }
                 else
