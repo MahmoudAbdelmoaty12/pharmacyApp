@@ -3,6 +3,7 @@ using pharmacyApp.models.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -52,7 +53,11 @@ namespace pharmacyApp.Application.Services
 
         public ApplicationUser GetUserByEmail(string email)
         {
-            return _applicationUser.FindAll(User => User.Email == email, 1, 0).SingleOrDefault();
+            return (_applicationUser.FindAll(User => User.Email == email.ToLower(), 1, 0).SingleOrDefault());
+        }
+        public IQueryable<ApplicationUser> FindAllUsers(Expression<Func<ApplicationUser, bool>> criteria, int? take, int? skip, Expression<Func<ApplicationUser, object>> orderBy = null, string orderByDirection = "ASC")
+        {
+            return _applicationUser.FindAll(user => user.Name.Contains(orderByDirection, StringComparison.CurrentCultureIgnoreCase),10,0);
         }
     }
 }

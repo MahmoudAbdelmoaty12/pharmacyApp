@@ -277,11 +277,12 @@
             guna2Button2.HoverState.BorderColor = Color.Black;
             guna2Button2.HoverState.FillColor = Color.White;
             guna2Button2.HoverState.ForeColor = Color.FromArgb(0, 118, 225);
+            guna2Button2.Image = (Image)resources.GetObject("guna2Button2.Image");
             guna2Button2.ImageSize = new Size(30, 30);
-            guna2Button2.Location = new Point(552, 431);
+            guna2Button2.Location = new Point(874, 571);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2Button2.Size = new Size(147, 45);
+            guna2Button2.Size = new Size(183, 45);
             guna2Button2.TabIndex = 11;
             guna2Button2.Text = "Sign Up";
             guna2Button2.Click += guna2Button2_Click;
@@ -291,9 +292,10 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(1213, 600);
+            ClientSize = new Size(1292, 638);
             Controls.Add(Btnreset);
             Controls.Add(Btnsignin);
+            Controls.Add(guna2Button2);
             Controls.Add(TextPassword);
             Controls.Add(TextUsername);
             Controls.Add(label4);

@@ -1,7 +1,11 @@
-﻿namespace PharmacyApp.View
+﻿using pharmacyApp.Application.Services;
+using PharmacyApp.Infrastructure.Repositories;
+
+namespace PharmacyApp.View
 {
     partial class Pharmacy
     {
+        
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -28,6 +32,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+           
             components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pharmacy));
@@ -47,9 +52,9 @@
             pictureBox1 = new PictureBox();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             panel2 = new Panel();
-            uI_Modify1 = new UI_Modify();
-            uI_ViewMedicine1 = new UI_ViewMedicine();
-            uI_AddMedicine1 = new UI_AddMedicine();
+            //uI_Modify1 = new UI_Modify();
+            //uI_ViewMedicine1 = new UI_ViewMedicine();
+            //uI_AddMedicine1 = new UI_AddMedicine(medicineService);
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(components);
             panel1.SuspendLayout();

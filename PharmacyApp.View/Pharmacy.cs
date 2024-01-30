@@ -13,17 +13,20 @@ namespace PharmacyApp.View
 {
     public partial class Pharmacy : Form
     {
-        private IApplicationUserService applicationUserService;
+        //private IMedicineService _medicineService;
+        //private IApplicationUserService _userService;
         public Pharmacy()
         {
             InitializeComponent();
+            //_medicineService = medicineService;
+            //_userService = userService;
         }
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
-            Registration re = new Registration(applicationUserService);
-            re.Show();
-            this.Hide();
+            //Registration re = new Registration(_UserService);
+            //re.Show();
+            //this.Hide();
         }
 
         private void guna2Button6_Click(object sender, EventArgs e)

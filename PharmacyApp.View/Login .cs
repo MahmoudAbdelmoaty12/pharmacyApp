@@ -45,16 +45,16 @@ namespace PharmacyApp.View
 
         private void Btnsignin_Click(object sender, EventArgs e)
         {
-            ApplicationUser res = _applicationUserService.GetUserByEmail(TextUsername.Text);
             try
             {
+                ApplicationUser res = _applicationUserService.GetUserByEmail(TextUsername.Text.ToLower());
                 if (res != null)
                 {
                     if (res.Type == ApplicationUserType.admin)
                     {
                         if (res.Password == TextPassword.Text)
                         {
-                            Adminstraion f = new Adminstraion();
+                            Adminstraion f = new Adminstraion(this);
                             f.Show();
                             this.Hide();
                         }
@@ -77,12 +77,16 @@ namespace PharmacyApp.View
                         }
                     }
                 }
+                else
+                {
+                    MessageBox.Show("wrong username or passowrd", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
-                MessageBox.Show("wrong username or passowrd", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message);
             }
-
+            
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)

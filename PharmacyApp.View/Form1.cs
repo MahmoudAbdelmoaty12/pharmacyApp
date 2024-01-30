@@ -7,7 +7,7 @@ namespace PharmacyApp.View
     public partial class Form1 : Form
     {
         private  IApplicationUserService _userService;
-        
+        private IMedicineService _medicineService;
         public Form1(IApplicationUserService userService)
         {
             InitializeComponent();
@@ -33,16 +33,15 @@ namespace PharmacyApp.View
         }
         private ApplicationUserType GetUserType(string userType)
         {
-            if (userType.Equals("Admin", StringComparison.OrdinalIgnoreCase))
+            switch (userType?.ToLower())
             {
-                return ApplicationUserType.admin;
+                case "admin":
+                    return ApplicationUserType.admin;
+                case "patient":
+                    return ApplicationUserType.user;
+                default:
+                    return ApplicationUserType.user; // Default to user type if not recognized
             }
-            else if (userType.Equals("Patient", StringComparison.OrdinalIgnoreCase))
-            {
-                return ApplicationUserType.user;
-            }
-            // Handle other cases if needed
-            return ApplicationUserType.user; // Default to user type if not recognized
         }
         private void guna2Button1_Click(object sender, EventArgs e)
         {
@@ -56,7 +55,7 @@ namespace PharmacyApp.View
             string phoneNumber = PhoneTxt.Text;
             string? userType = userTypeComboBox.SelectedItem?.ToString();
 
-            if (name.Length > 5 && password.Length > 8 && email.Contains("@") && isAgeValid && age > 21 && IsPhoneNumberValid(phoneNumber)&&!string.IsNullOrEmpty(userType))
+            if (name.Length > 3 && password.Length > 8 && email.Contains("@") && isAgeValid && age > 21 && IsPhoneNumberValid(phoneNumber)&&!string.IsNullOrEmpty(userType))
             {
                 ApplicationUser newUser = new ApplicationUser
                 {
@@ -86,12 +85,16 @@ namespace PharmacyApp.View
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-           NameTxt.Clear();
+            NameTxt.Clear();
             EmailTxt.Clear();
             PhoneTxt.Clear();
             PasswordTxt.Clear();
             AgeTxt.Clear();
             AddressTxt.Clear();
+
+            UI_AddMedicine uI_Add = new UI_AddMedicine(_medicineService);
+            uI_Add.Show();
+            
         }
     }
 }

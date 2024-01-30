@@ -179,6 +179,7 @@
             guna2Button3.Size = new Size(129, 33);
             guna2Button3.TabIndex = 58;
             guna2Button3.Text = "Search";
+            guna2Button3.Click += guna2Button3_Click;
             // 
             // guna2Elipse1
             // 
@@ -196,6 +197,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "UI__ViewUser";
             Size = new Size(964, 579);
+            Load += UI__ViewUser_Load;
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
