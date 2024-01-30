@@ -25,7 +25,7 @@ namespace PharmacyApp.View
         //UI__ViewUser uI = new UI__ViewUser(Users.ToHashSet());
         // Registration registration //new Registration(new ApplicationUserService(new ApplicationUserRepository(new AppDbContext())));
         //UI__ViewUser uI;
-        public Adminstraion( Registration registration)
+        public Adminstraion(Registration registration)
         {
             InitializeComponent();
             _applicationUserService = registration._applicationUserService;
@@ -84,7 +84,7 @@ namespace PharmacyApp.View
             BtnAdduser.PerformClick();
             guna2Button4.PerformClick();
             viewUser.PerformClick();
-            this.uI.Dock = DockStyle.Fill;
+            this.uI.Dock = DockStyle.Right;
             this.Controls.Add(this.uI);
 
 

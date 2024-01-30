@@ -67,7 +67,7 @@ namespace PharmacyApp.View
                     {
                         if (res.Password == TextPassword.Text)
                         {
-                            Pharmacy f = new Pharmacy(this);
+                            Pharmacy f = new Pharmacy();
                             f.Show();
                             this.Hide();
                         }
