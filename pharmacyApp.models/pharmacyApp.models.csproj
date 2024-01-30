@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <BaseOutputPath>C:\Users\mostafa\New folder</BaseOutputPath>
+    <BaseOutputPath>C:\Users\Zyad Elfakharany\source\repos\MahmoudAbdelmoaty12\pharmacyApp\pharmacyApp.models\obj\Debug\net8.0\ref</BaseOutputPath>
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
 
