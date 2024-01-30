@@ -1,4 +1,5 @@
 ﻿using Guna.UI2.WinForms;
+using Microsoft.VisualBasic.ApplicationServices;
 using pharmacyApp.Application.Services;
 using pharmacyApp.models.Models;
 using System;
@@ -47,11 +48,16 @@ namespace PharmacyApp.View
                 orderBy: null,
                 orderByDirection: "ASC"
             ).ToList();
-
+            
 
             guna2DataGridView1.AutoGenerateColumns = true;
             guna2DataGridView1.DataSource = Users;
             guna2DataGridView1.Refresh();*/
+            //_Users.Contains(user => user.Name == searchQuery);
+            var Users = _Users.FindAll(user => user.Name.Equals(searchQuery, StringComparison.OrdinalIgnoreCase));
+            guna2DataGridView1.AutoGenerateColumns = true;
+            guna2DataGridView1.DataSource = Users;
+            guna2DataGridView1.Refresh();
         }
 
         private void UI__ViewUser_Load(object sender, EventArgs e)
