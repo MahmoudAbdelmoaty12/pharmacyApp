@@ -1,6 +1,4 @@
-﻿using Guna.UI2.WinForms;
-using pharmacyApp.Application.Services;
-using pharmacyApp.models.Models;
+﻿using pharmacyApp.Application.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +19,47 @@ namespace PharmacyApp.View
         {
             InitializeComponent();
             _medicineService = medicineService;
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            if (guna2TextBox1.Text != "")
+            {
+                var medicine = _medicineService.GetMedicine(int.Parse(guna2TextBox1.Text));
+                if (medicine != null)
+                {
+
+                    guna2TextBox2.Text = medicine.Name;
+                    guna2TextBox3.Text = medicine.Tapes.ToString();
+                    guna2DateTimePicker1.Value = (DateTime)medicine.ExpirationDate;
+                    guna2DateTimePicker2.Value = (DateTime)medicine.ProductionDate;
+                    guna2TextBox4.Text = medicine.Quantity.ToString();
+                    guna2TextBox5.Text = medicine.Price.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Please Enter Right Id");
+                }
+            }
+            else if (guna2TextBox2.Text != "")
+            {
+                var medicine = _medicineService.GetMedicineName(guna2TextBox2.Text.ToString());
+                if (medicine != null)
+                {
+                    guna2TextBox1.Text = medicine.Id.ToString();
+                    guna2TextBox2.Text = medicine.Name;
+                    guna2TextBox3.Text = medicine.Tapes.ToString();
+                    guna2DateTimePicker1.Value = (DateTime)medicine.ExpirationDate;
+                    guna2DateTimePicker2.Value = (DateTime)medicine.ProductionDate;
+                    guna2TextBox4.Text = medicine.Quantity.ToString();
+                    guna2TextBox5.Text = medicine.Price.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Please Enter Right Name");
+                }
+            }
+
         }
         private MedicincsType GetMedicineType(string? medicinetype)
         {
