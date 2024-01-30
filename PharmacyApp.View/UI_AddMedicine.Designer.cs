@@ -302,6 +302,7 @@
             guna2Button1.Size = new Size(146, 48);
             guna2Button1.TabIndex = 15;
             guna2Button1.Text = "Add";
+            guna2Button1.Click += guna2Button1_Click;
             // 
             // guna2Button2
             // 
