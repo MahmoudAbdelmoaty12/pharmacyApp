@@ -16,8 +16,8 @@ namespace PharmacyApp.View
 {
     public partial class UI__ViewUser : UserControl
     {
-        List<ApplicationUser> _Users;
-        public UI__ViewUser(List<ApplicationUser> Users)
+        HashSet<ApplicationUser> _Users;
+        public UI__ViewUser(HashSet<ApplicationUser> Users)
         {
             InitializeComponent();
             _Users = Users;
@@ -31,17 +31,17 @@ namespace PharmacyApp.View
         //}
         private void LoadUserData()
         {
-            //var Users = _applicationUserService.GetAllUsers()?.ToHashSet();
+            var Users = _Users.ToList();
 
 
             guna2DataGridView1.AutoGenerateColumns = true;
-            guna2DataGridView1.DataSource = _Users;
+            guna2DataGridView1.DataSource = Users;
             guna2DataGridView1.Refresh();
         }
 
         private void SearchUserData(string searchQuery)
         {
-            var Users = _Users.FindAll(user => user.Name.Contains(searchQuery, StringComparison.OrdinalIgnoreCase));
+            var Users = _Users.Where(user => user.Name.Contains(searchQuery, StringComparison.OrdinalIgnoreCase)).ToList();
             guna2DataGridView1.AutoGenerateColumns = true;
             guna2DataGridView1.DataSource = Users;
             guna2DataGridView1.Refresh();
@@ -56,6 +56,12 @@ namespace PharmacyApp.View
         private void guna2Button3_Click(object sender, EventArgs e)
         {
             SearchUserData(guna2TextBox1.Text);
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            //var DeletedUsers = (ApplicationUser)guna2DataGridView1.SelectedCells[0].Value;
+            //_Users.RemoveWhere();
         }
     }
 }

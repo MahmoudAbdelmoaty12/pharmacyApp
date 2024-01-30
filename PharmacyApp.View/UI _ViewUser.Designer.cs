@@ -154,6 +154,7 @@
             guna2Button2.Size = new Size(129, 33);
             guna2Button2.TabIndex = 57;
             guna2Button2.Text = "Delete";
+            guna2Button2.Click += guna2Button2_Click;
             // 
             // guna2Button3
             // 

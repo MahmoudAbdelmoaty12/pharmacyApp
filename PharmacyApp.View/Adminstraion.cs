@@ -20,7 +20,7 @@ namespace PharmacyApp.View
     {
         
         private IApplicationUserService _applicationUserService;
-        private List<ApplicationUser> Users { get; set; }
+        private HashSet<ApplicationUser> Users { get; set; }
         public UI__ViewUser uI { get; set; }
         //UI__ViewUser uI = new UI__ViewUser(Users.ToHashSet());
         // Registration registration //new Registration(new ApplicationUserService(new ApplicationUserRepository(new AppDbContext())));
@@ -29,7 +29,7 @@ namespace PharmacyApp.View
         {
             InitializeComponent();
             _applicationUserService = registration._applicationUserService;
-            this.Users = _applicationUserService.GetAllUsers().ToList();
+            this.Users = _applicationUserService.GetAllUsers().ToHashSet();
              this.uI = new UI__ViewUser(Users);
            // _applicationUserService = applicationUserService;
             //this.registration = registration;
