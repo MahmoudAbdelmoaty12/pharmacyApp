@@ -1,5 +1,6 @@
 ﻿using Guna.UI2.WinForms;
 using pharmacyApp.Application.Services;
+using pharmacyApp.models.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,11 +15,11 @@ namespace PharmacyApp.View
 {
     public partial class UI__ViewUser : UserControl
     {
-        private IApplicationUserService _applicationUserService;
-        public UI__ViewUser(IApplicationUserService applicationUserService)
+        List<ApplicationUser> _Users;
+        public UI__ViewUser(List<ApplicationUser> Users)
         {
             InitializeComponent();
-            _applicationUserService = applicationUserService;
+            _Users = Users;
         }
         //public delegate void DataChangedEventHandler(object sender, DataChangedEventArgs e);
         //public event DataChangedEventHandler OnDataChanged;
@@ -29,17 +30,17 @@ namespace PharmacyApp.View
         //}
         private void LoadUserData()
         {
-            var Users = _applicationUserService.GetAllUsers()?.ToHashSet();
+            //var Users = _applicationUserService.GetAllUsers()?.ToHashSet();
 
 
             guna2DataGridView1.AutoGenerateColumns = true;
-            guna2DataGridView1.DataSource = Users;
+            guna2DataGridView1.DataSource = _Users;
             guna2DataGridView1.Refresh();
         }
 
         private void SearchUserData(string searchQuery)
         {
-            var Users = _applicationUserService.FindAllUsers(
+            /*var Users = _applicationUserService.FindAllUsers(
                 user => user.Name.Contains(searchQuery),
                 take: null,
                 skip: null,
@@ -50,7 +51,7 @@ namespace PharmacyApp.View
 
             guna2DataGridView1.AutoGenerateColumns = true;
             guna2DataGridView1.DataSource = Users;
-            guna2DataGridView1.Refresh();
+            guna2DataGridView1.Refresh();*/
         }
 
         private void UI__ViewUser_Load(object sender, EventArgs e)

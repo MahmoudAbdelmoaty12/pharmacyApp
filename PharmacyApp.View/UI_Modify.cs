@@ -1,4 +1,5 @@
 ﻿using pharmacyApp.Application.Services;
+using pharmacyApp.models.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,7 +22,7 @@ namespace PharmacyApp.View
             _medicineService = medicineService;
         }
 
-        private void guna2Button3_Click(object sender, EventArgs e)
+        private void Guna2Button3_Click(object sender, EventArgs e)
         {
             if (guna2TextBox1.Text != "")
             {

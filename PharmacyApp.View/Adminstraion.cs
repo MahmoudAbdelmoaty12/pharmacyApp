@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
 using pharmacyApp.Application.Services;
+using pharmacyApp.models.Models;
 using PharmacyApp.Context.Context;
 using PharmacyApp.Infrastructure.Repositories;
 using PharmacyApp.View.Admin;
@@ -19,18 +20,22 @@ namespace PharmacyApp.View
     {
         
         private IApplicationUserService _applicationUserService;
-       // Registration registration //new Registration(new ApplicationUserService(new ApplicationUserRepository(new AppDbContext())));
-       UI__ViewUser uI = new UI__ViewUser(new ApplicationUserService(new ApplicationUserRepository(new AppDbContext())));
+        private List<ApplicationUser> Users { get; set; }
+        public UI__ViewUser uI { get; set; }
+        //UI__ViewUser uI = new UI__ViewUser(Users.ToHashSet());
+        // Registration registration //new Registration(new ApplicationUserService(new ApplicationUserRepository(new AppDbContext())));
+        //UI__ViewUser uI;
         public Adminstraion( Registration registration)
         {
             InitializeComponent();
             _applicationUserService = registration._applicationUserService;
-            uI__ViewUser1 = new UI__ViewUser(_applicationUserService);
+            this.Users = _applicationUserService.GetAllUsers().ToList();
+             this.uI = new UI__ViewUser(Users);
            // _applicationUserService = applicationUserService;
             //this.registration = registration;
             
             //applicationUserService = new ApplicationUserService(new ApplicationUserService()); 
-            // this.Load += Adminstraion_Load;
+            //this.Load += Adminstraion_Load;
         }
 
         private void guna2Button5_Click(object sender, EventArgs e)
@@ -70,17 +75,17 @@ namespace PharmacyApp.View
 
         private void Adminstraion_Load(object sender, EventArgs e)
         {
-            //var uiviewuser = new UI__ViewUser(new ApplicationUserService(new ApplicationUserRepository(new AppDbContext())));
+            //var uiviewuser = new UI__ViewUser(Users);
             
             addUser11.Visible = false;
-            //  viewUser1.Visible = false;
+            //viewUser1.Visible = false;
             updateUser1.Visible = false;
-            uI__ViewUser1.Visible = false;
+            this.uI.Visible = false;
             BtnAdduser.PerformClick();
             guna2Button4.PerformClick();
             viewUser.PerformClick();
-            //uiviewuser.Dock = DockStyle.Fill;
-            //this.Controls.Add(uiviewuser);
+            this.uI.Dock = DockStyle.Fill;
+            this.Controls.Add(this.uI);
 
 
 
@@ -92,10 +97,9 @@ namespace PharmacyApp.View
             //viewUser1.Visible = true;
             //viewUser1.BringToFront();
 
-            uI__ViewUser1.Visible = true;
-            uI__ViewUser1.BringToFront();
+            this.uI.Visible = true;
+            this.uI.BringToFront();
         }
-
         private void addUser11_Load(object sender, EventArgs e)
         {
 
