@@ -17,6 +17,7 @@ namespace PharmacyApp.View
     public partial class UI__ViewUser : UserControl
     {
         HashSet<ApplicationUser> _Users;
+        public event EventHandler<int> UserIdSent;
         public UI__ViewUser(HashSet<ApplicationUser> Users)
         {
             InitializeComponent();
@@ -57,11 +58,42 @@ namespace PharmacyApp.View
         {
             SearchUserData(guna2TextBox1.Text);
         }
+        public void ChildForm_UserIdSent(object sender, int value)
+        {
+            // Handle the received value here
+            MessageBox.Show("Received value: " + value);
+        }
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            //var DeletedUsers = (ApplicationUser)guna2DataGridView1.SelectedCells[0].Value;
-            //_Users.RemoveWhere();
+            if (guna2DataGridView1.SelectedRows.Count > 0)
+            {
+                DialogResult result = MessageBox.Show("Are you sure you want to delete this medicine?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+
+                    var selectedUser = guna2DataGridView1.SelectedRows[0];
+                    var UserId = (int)selectedUser.Cells[0].Value;
+                    //ApplicationUser user = new()
+                    //{
+                    //    selectedUser.Cells[0].Value,
+                    //}
+                    //_Users.Remove(selectedUser);
+
+
+                    if (UserIdSent != null)
+                    {
+                        UserIdSent.Invoke(this, UserId);
+                    }
+
+                    LoadUserData();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to delete.", "No Row Selected", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

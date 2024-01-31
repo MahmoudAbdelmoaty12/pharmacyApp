@@ -78,5 +78,7 @@ namespace PharmacyApp.View
             Pricetxt.Clear();
 
         }
+
+ 
     }
 }
