@@ -78,5 +78,10 @@ namespace PharmacyApp.View
             Pricetxt.Clear();
 
         }
+
+        private void Nametxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

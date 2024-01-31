@@ -18,7 +18,7 @@ namespace PharmacyApp.View
 {
     public partial class Adminstraion : Form
     {
-        
+
         private IApplicationUserService _applicationUserService;
         private HashSet<ApplicationUser> Users { get; set; }
         public UI__ViewUser uI { get; set; }
@@ -30,13 +30,14 @@ namespace PharmacyApp.View
             InitializeComponent();
             _applicationUserService = registration._applicationUserService;
             this.Users = _applicationUserService.GetAllUsers().ToHashSet();
-             this.uI = new UI__ViewUser(Users);
-           // _applicationUserService = applicationUserService;
+            this.uI = new UI__ViewUser(Users);
+            // _applicationUserService = applicationUserService;
             //this.registration = registration;
-            
+
             //applicationUserService = new ApplicationUserService(new ApplicationUserService()); 
             //this.Load += Adminstraion_Load;
         }
+        public Adminstraion() { }
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
@@ -61,8 +62,8 @@ namespace PharmacyApp.View
 
         private void BtnAdduser_Click(object sender, EventArgs e)
         {
-            addUser11.Visible = true;
-            addUser11.BringToFront();
+            //addUser11.Visible = true;
+          //  addUser11.BringToFront();
 
 
 
@@ -76,10 +77,9 @@ namespace PharmacyApp.View
         private void Adminstraion_Load(object sender, EventArgs e)
         {
             //var uiviewuser = new UI__ViewUser(Users);
-            
-            addUser11.Visible = false;
+                   //   addUser11.Visible = false;
             //viewUser1.Visible = false;
-            updateUser1.Visible = false;
+            //updateUser1.Visible = false;
             this.uI.Visible = false;
             BtnAdduser.PerformClick();
             guna2Button4.PerformClick();
@@ -122,8 +122,20 @@ namespace PharmacyApp.View
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
-            updateUser1.Visible = true;
-            updateUser1.BringToFront();
+          //  updateUser1.Visible = true;
+          //  updateUser1.BringToFront();
+        }
+
+        private void updateUser1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click_1(object sender, EventArgs e)
+        {
+            Pharmacy pharmacy = new Pharmacy();
+            pharmacy.Show();
+            this.Hide();
         }
         //private void AddUser_UI_FormClosing(object sender, FormClosingEventArgs e)
         //{
