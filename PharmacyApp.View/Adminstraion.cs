@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,10 @@ namespace PharmacyApp.View
         private IApplicationUserService _applicationUserService;
         private HashSet<ApplicationUser> Users { get; set; }
         public UI__ViewUser uI { get; set; }
+        private int WhichUi { get; set; }
+
+
+
         //UI__ViewUser uI = new UI__ViewUser(Users.ToHashSet());
         // Registration registration //new Registration(new ApplicationUserService(new ApplicationUserRepository(new AppDbContext())));
         //UI__ViewUser uI;
@@ -37,7 +42,7 @@ namespace PharmacyApp.View
             //applicationUserService = new ApplicationUserService(new ApplicationUserService()); 
             //this.Load += Adminstraion_Load;
         }
-
+       
         private void guna2Button5_Click(object sender, EventArgs e)
         {
             //if (_applicationUserService != null)
@@ -63,7 +68,7 @@ namespace PharmacyApp.View
         {
             addUser11.Visible = true;
             addUser11.BringToFront();
-
+            WhichUi = 1;
 
 
         }
@@ -84,19 +89,35 @@ namespace PharmacyApp.View
             BtnAdduser.PerformClick();
             guna2Button4.PerformClick();
             viewUser.PerformClick();
+            uI.UserIdSent += ChildForm_DataSent;
             this.uI.Dock = DockStyle.Right;
             this.Controls.Add(this.uI);
+            if (WhichUi == 0 )
+            {
+                //this.uI.Visible = true; //this.uI.Visible = false;
+               
+            }
 
 
 
 
+        }
+        private void ChildForm_DataSent(object sender, int data)
+        {
+            // Handle the data received from the child form
+            //MessageBox.Show($"Data received from child form: {data}");
+            var DeletedUser =_applicationUserService.GetUser(data);
+            _applicationUserService.DeleteUser(DeletedUser);
+
+
+            // Optionally, you can perform further processing with the data
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
             //viewUser1.Visible = true;
             //viewUser1.BringToFront();
-
+            WhichUi = 0;
             this.uI.Visible = true;
             this.uI.BringToFront();
         }
@@ -122,15 +143,11 @@ namespace PharmacyApp.View
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
+            WhichUi = 2;
             updateUser1.Visible = true;
             updateUser1.BringToFront();
         }
-        //private void AddUser_UI_FormClosing(object sender, FormClosingEventArgs e)
-        //{
-        //    // إظهار النموذج الحالي عند إغلاق AddUser_UI
-        //    this.Show();
-        //}
-
+       
 
     }
 }

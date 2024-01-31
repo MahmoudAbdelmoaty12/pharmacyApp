@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace PharmacyApp.View
 {
-    public partial class Registration : Form
+    public partial class  Registration : Form
     {
         public IApplicationUserService _applicationUserService;
         public Registration(IApplicationUserService applicationUserService)
@@ -37,6 +37,7 @@ namespace PharmacyApp.View
             Close();
         }
 
+
         private void Btnreset_Click(object sender, EventArgs e)
         {
             TextUsername.Clear();
@@ -55,6 +56,7 @@ namespace PharmacyApp.View
                         if (res.Password == TextPassword.Text)
                         {
                             Adminstraion f = new Adminstraion(this);
+                            
                             f.Show();
                             this.Hide();
                         }
