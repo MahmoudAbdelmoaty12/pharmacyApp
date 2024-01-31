@@ -22,6 +22,12 @@ namespace PharmacyApp.View
         private IApplicationUserService _applicationUserService;
         private HashSet<ApplicationUser> Users { get; set; }
         public UI__ViewUser uI { get; set; }
+        public AddUser1 AddUserUI { get; set; }
+        public UpdateUser UpdateUserUI { get; set; }
+        private int WhichUi { get; set; }
+
+
+
         //UI__ViewUser uI = new UI__ViewUser(Users.ToHashSet());
         // Registration registration //new Registration(new ApplicationUserService(new ApplicationUserRepository(new AppDbContext())));
         //UI__ViewUser uI;
@@ -30,7 +36,9 @@ namespace PharmacyApp.View
             InitializeComponent();
             _applicationUserService = registration._applicationUserService;
             this.Users = _applicationUserService.GetAllUsers().ToHashSet();
-             this.uI = new UI__ViewUser(Users);
+            this.uI = new UI__ViewUser(Users);
+            this.AddUserUI = new AddUser1();
+            this.UpdateUserUI = new UpdateUser();
            // _applicationUserService = applicationUserService;
             //this.registration = registration;
             
@@ -61,6 +69,8 @@ namespace PharmacyApp.View
 
         private void BtnAdduser_Click(object sender, EventArgs e)
         {
+            this.uI.Visible = false;
+            this.UpdateUserUI.Visible = false;
             addUser11.Visible = true;
             addUser11.BringToFront();
 
@@ -89,14 +99,30 @@ namespace PharmacyApp.View
 
 
 
+            }
+            else if(this.WhichUi == 2)
+            {
+               
+                this.UpdateUserUI.Visible = true;
+                this.UpdateUserUI.Dock = DockStyle.Right;
+                this.Controls.Add(this.UpdateUserUI);
+            }
 
+
+
+        }
+        private void ChildForm_DataSent(object sender, int data)
+        {
+            
+            var DeletedUser =_applicationUserService.GetUser(data);
+            _applicationUserService.DeleteUser(DeletedUser);
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            //viewUser1.Visible = true;
-            //viewUser1.BringToFront();
-
+            this.AddUserUI.Visible = false;
+            this.UpdateUserUI.Visible = false;
+            this.WhichUi = 0;
             this.uI.Visible = true;
             this.uI.BringToFront();
         }
@@ -122,8 +148,12 @@ namespace PharmacyApp.View
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
+            this.uI.Visible = false;
+            this.AddUserUI.Visible = false;
+            this.WhichUi = 2;
             updateUser1.Visible = true;
             updateUser1.BringToFront();
+
         }
         //private void AddUser_UI_FormClosing(object sender, FormClosingEventArgs e)
         //{
