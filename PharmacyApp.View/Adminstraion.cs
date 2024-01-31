@@ -23,6 +23,10 @@ namespace PharmacyApp.View
         private IApplicationUserService _applicationUserService;
         private HashSet<ApplicationUser> Users { get; set; }
         public UI__ViewUser uI { get; set; }
+        public AddUser1 AddUserUI { get; set; }
+        public UpdateUser UpdateUserUI { get; set; }
+
+
         private int WhichUi { get; set; }
 
 
@@ -36,11 +40,13 @@ namespace PharmacyApp.View
             _applicationUserService = registration._applicationUserService;
             this.Users = _applicationUserService.GetAllUsers().ToHashSet();
              this.uI = new UI__ViewUser(Users);
+            this.AddUserUI = new AddUser1();
+            this.UpdateUserUI = new UpdateUser();
            // _applicationUserService = applicationUserService;
             //this.registration = registration;
             
             //applicationUserService = new ApplicationUserService(new ApplicationUserService()); 
-            //this.Load += Adminstraion_Load;
+            this.Load += Adminstraion_Load;
         }
        
         private void guna2Button5_Click(object sender, EventArgs e)
@@ -66,9 +72,10 @@ namespace PharmacyApp.View
 
         private void BtnAdduser_Click(object sender, EventArgs e)
         {
+            this.uI.Visible = false;
             addUser11.Visible = true;
             addUser11.BringToFront();
-            WhichUi = 1;
+            this.WhichUi = 1;
 
 
         }
@@ -81,23 +88,38 @@ namespace PharmacyApp.View
         private void Adminstraion_Load(object sender, EventArgs e)
         {
             //var uiviewuser = new UI__ViewUser(Users);
-            
-            addUser11.Visible = false;
+
+            this.UpdateUserUI.Visible = false;
             //viewUser1.Visible = false;
-            updateUser1.Visible = false;
+            this.AddUserUI.Visible = false;
             this.uI.Visible = false;
             BtnAdduser.PerformClick();
             guna2Button4.PerformClick();
             viewUser.PerformClick();
-            uI.UserIdSent += ChildForm_DataSent;
-            this.uI.Dock = DockStyle.Right;
-            this.Controls.Add(this.uI);
-            if (WhichUi == 0 )
+            
+            if (this.WhichUi == 0 )
             {
-                //this.uI.Visible = true; //this.uI.Visible = false;
-               
-            }
+                uI.UserIdSent += ChildForm_DataSent;
+                this.uI.Visible = true; 
+                this.uI.Dock = DockStyle.Right;
+                this.Controls.Add(this.uI);
 
+            }
+            else if(this.WhichUi == 1 ) 
+            {
+                
+                this.AddUserUI.Visible = true;
+                this.AddUserUI.Dock = DockStyle.Right;
+                this.Controls.Add(this.AddUserUI);
+
+            }
+            else if(this.WhichUi == 2)
+            {
+               
+                this.UpdateUserUI.Visible = true;
+                this.UpdateUserUI.Dock = DockStyle.Right;
+                this.Controls.Add(this.UpdateUserUI);
+            }
 
 
 
@@ -117,7 +139,7 @@ namespace PharmacyApp.View
         {
             //viewUser1.Visible = true;
             //viewUser1.BringToFront();
-            WhichUi = 0;
+            this.WhichUi = 0;
             this.uI.Visible = true;
             this.uI.BringToFront();
         }
@@ -143,11 +165,13 @@ namespace PharmacyApp.View
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
-            WhichUi = 2;
+            this.WhichUi = 2;
             updateUser1.Visible = true;
             updateUser1.BringToFront();
+            this.uI.Visible = false;
+
         }
-       
+
 
     }
 }
