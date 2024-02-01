@@ -46,7 +46,7 @@ namespace PharmacyApp.View
             //this.registration = registration;
             
             //applicationUserService = new ApplicationUserService(new ApplicationUserService()); 
-            this.Load += Adminstraion_Load;
+            //this.Load += Adminstraion_Load;
         }
        
         private void guna2Button5_Click(object sender, EventArgs e)
@@ -72,10 +72,17 @@ namespace PharmacyApp.View
 
         private void BtnAdduser_Click(object sender, EventArgs e)
         {
-            this.uI.Visible = false;
-            addUser11.Visible = true;
-            addUser11.BringToFront();
             this.WhichUi = 1;
+            //this.uI.Visible = false;
+            //addUser11.Visible = true;
+            //addUser11.BringToFront();
+            this.uI.Visible = false;
+            this.UpdateUserUI.Visible = false;
+
+            this.AddUserUI.Visible = true;
+
+           
+            this.AddUserUI.BringToFront();
 
 
         }
@@ -96,7 +103,10 @@ namespace PharmacyApp.View
             BtnAdduser.PerformClick();
             guna2Button4.PerformClick();
             viewUser.PerformClick();
-            
+            //AddUserUI.OnAddUser1 += ChildForm_ApplicationUserSent;
+            //this.Controls.Add(this.AddUserUI);
+            //this.WhichUi = 1;
+
             if (this.WhichUi == 0 )
             {
                 uI.UserIdSent += ChildForm_DataSent;
@@ -107,7 +117,7 @@ namespace PharmacyApp.View
             }
             else if(this.WhichUi == 1 ) 
             {
-                
+                AddUserUI.ApplicationUserSent += ChildForm_ApplicationUserSent;
                 this.AddUserUI.Visible = true;
                 this.AddUserUI.Dock = DockStyle.Right;
                 this.Controls.Add(this.AddUserUI);
@@ -134,14 +144,27 @@ namespace PharmacyApp.View
 
             // Optionally, you can perform further processing with the data
         }
+        private void ChildForm_ApplicationUserSent(object sender, ApplicationUser data)
+        {
+            // Handle the data received from the child form
+            MessageBox.Show($"Data received from child form: {data.Email}");
+            //var DeletedUser = _applicationUserService.GetUser(data);
+            //_applicationUserService.DeleteUser(DeletedUser);
+
+
+            // Optionally, you can perform further processing with the data
+        }
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
             //viewUser1.Visible = true;
             //viewUser1.BringToFront();
+            this.AddUserUI.Visible = false;
+            this.UpdateUserUI.Visible = false;
             this.WhichUi = 0;
             this.uI.Visible = true;
             this.uI.BringToFront();
+           
         }
         private void addUser11_Load(object sender, EventArgs e)
         {
@@ -165,10 +188,13 @@ namespace PharmacyApp.View
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
+            this.uI.Visible = false;
+            this.AddUserUI.Visible = false;
             this.WhichUi = 2;
             updateUser1.Visible = true;
             updateUser1.BringToFront();
-            this.uI.Visible = false;
+            
+
 
         }
 

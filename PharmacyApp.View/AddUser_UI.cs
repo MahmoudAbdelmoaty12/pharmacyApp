@@ -1,11 +1,14 @@
-﻿using pharmacyApp.Application.Services;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using pharmacyApp.Application.Services;
 using pharmacyApp.models.Models;
+using PharmacyApp.Infrastructure.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Management;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,11 +17,13 @@ namespace PharmacyApp.View.Admin
 {
     public partial class AddUser1 : UserControl
     {
-        IApplicationUserService _userService;
+        IApplicationUserService _userService;// new ApplicationUserService(new ApplicationUserRepository(new Context.Context.AppDbContext()));
+        public event EventHandler<ApplicationUser> ApplicationUserSent;
         public AddUser1()
         {
             InitializeComponent();
-
+            //_userService = UserService;
+            _userService = new ApplicationUserService(new ApplicationUserRepository(new Context.Context.AppDbContext()));
         }
 
 
@@ -72,11 +77,16 @@ namespace PharmacyApp.View.Admin
                     PhoneNumber = phoneNumber,
                     Type = GetUserType(userType)
                 };
+                this.ApplicationUserSent.Invoke(this, newUser);
+                
 
                 _userService.AddUser(newUser);
                 MessageBox.Show("User registered successfully!", "Registration", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
+            else
+            {
+                MessageBox.Show("Error");
+            }
             //internal void ShowDialog()
             //{
 

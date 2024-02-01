@@ -88,6 +88,8 @@ namespace PharmacyApp.View
                     }
 
                     LoadUserData();
+                    guna2DataGridView1.Refresh();
+
                 }
             }
             else

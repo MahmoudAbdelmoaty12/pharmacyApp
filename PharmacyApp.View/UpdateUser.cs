@@ -1,4 +1,5 @@
-﻿using System;
+﻿using pharmacyApp.models.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace PharmacyApp.View
 {
     public partial class UpdateUser : UserControl
     {
+        //public event EventHandler<ApplicationUser> ApplicationUserChanged;
         public UpdateUser()
         {
             InitializeComponent();
         }
+
     }
 }
