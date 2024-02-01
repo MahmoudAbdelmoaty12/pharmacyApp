@@ -18,7 +18,7 @@ namespace PharmacyApp.Context.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=DESKTOP-3LOCF94\\SQLEXPRESS;Initial Catalog=PharmacyApp;Integrated Security=True;Encrypt=False");
+            optionsBuilder.UseSqlServer("Data Source=DESKTOP-UVNJS3F\\SQLEXPRESS01;Initial Catalog=ITi_pharmacy;Integrated Security=True;Encrypt=false");
 
             base.OnConfiguring(optionsBuilder);
         }

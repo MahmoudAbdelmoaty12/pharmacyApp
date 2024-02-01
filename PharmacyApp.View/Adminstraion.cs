@@ -19,7 +19,7 @@ namespace PharmacyApp.View
 {
     public partial class Adminstraion : Form
     {
-        
+
         private IApplicationUserService _applicationUserService;
         private HashSet<ApplicationUser> Users { get; set; }
         public UI__ViewUser uI { get; set; }
@@ -44,7 +44,7 @@ namespace PharmacyApp.View
             this.UpdateUserUI = new UpdateUser();
            // _applicationUserService = applicationUserService;
             //this.registration = registration;
-            
+
             //applicationUserService = new ApplicationUserService(new ApplicationUserService()); 
             //this.Load += Adminstraion_Load;
         }

@@ -79,6 +79,9 @@ namespace PharmacyApp.View
 
         }
 
- 
+        private void Nametxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
