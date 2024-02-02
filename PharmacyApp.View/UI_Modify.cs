@@ -1,5 +1,7 @@
 ﻿using pharmacyApp.Application.Services;
 using pharmacyApp.models.Models;
+using PharmacyApp.Context.Context;
+using PharmacyApp.Infrastructure.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,10 +18,10 @@ namespace PharmacyApp.View
     {
         private IMedicineService _medicineService;
 
-        public UI_Modify(IMedicineService medicineService)
+        public UI_Modify()
         {
             InitializeComponent();
-            _medicineService = medicineService;
+            _medicineService = new MedicineService(new MedicineRepository(new AppDbContext()));
         }
 
         private void Guna2Button3_Click(object sender, EventArgs e)
@@ -127,7 +129,7 @@ namespace PharmacyApp.View
             DateTime valid = guna2DateTimePicker1.Value;
             DateTime expire = guna2DateTimePicker2.Value;
             int quntity = int.Parse(guna2TextBox4.Text);
-            int price = int.Parse(guna2TextBox5.Text);
+            decimal price = decimal.Parse(guna2TextBox5.Text);
 
             Medicincs medicincs = new Medicincs()
             {

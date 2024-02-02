@@ -51,6 +51,9 @@ namespace PharmacyApp.View
             pictureBox1 = new PictureBox();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             panel2 = new Panel();
+            uI_Modify1 = new UI_Modify();
+            uI_ViewMedicine1 = new UI_ViewMedicine();
+            uI_AddMedicine1 = new UI_AddMedicine();
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(components);
             panel1.SuspendLayout();

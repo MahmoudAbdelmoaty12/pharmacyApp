@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualBasic.ApplicationServices;
 using pharmacyApp.Application.Services;
 using pharmacyApp.models.Models;
+using PharmacyApp.Context.Context;
 using PharmacyApp.Infrastructure.Repositories;
 using System;
 using System.Collections.Generic;
@@ -22,8 +23,7 @@ namespace PharmacyApp.View.Admin
         public AddUser1()
         {
             InitializeComponent();
-            //_userService = UserService;
-            _userService = new ApplicationUserService(new ApplicationUserRepository(new Context.Context.AppDbContext()));
+            _userService =new ApplicationUserService(new ApplicationUserRepository(new AppDbContext()));
         }
 
 

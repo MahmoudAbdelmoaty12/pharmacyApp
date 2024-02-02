@@ -82,7 +82,6 @@ namespace PharmacyApp.Infrastructure.Repositories
         }
 
         public T Update(T entity)
-
         {
           return  _entity.Update(entity).Entity;
         }

@@ -2,6 +2,8 @@
 using Microsoft.VisualBasic.ApplicationServices;
 using pharmacyApp.Application.Services;
 using pharmacyApp.models.Models;
+using PharmacyApp.Context.Context;
+using PharmacyApp.Infrastructure.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,10 +20,12 @@ namespace PharmacyApp.View
     {
         HashSet<ApplicationUser> _Users;
         public event EventHandler<int> UserIdSent;
+        IApplicationUserService _UserService;
         public UI__ViewUser(HashSet<ApplicationUser> Users)
         {
             InitializeComponent();
             _Users = Users;
+            _UserService = new ApplicationUserService(new ApplicationUserRepository(new AppDbContext()));
         }
         //public delegate void DataChangedEventHandler(object sender, DataChangedEventArgs e);
         //public event DataChangedEventHandler OnDataChanged;
@@ -32,11 +36,11 @@ namespace PharmacyApp.View
         //}
         private void LoadUserData()
         {
-            var Users = _Users.ToList();
+            // var Users = _Users.ToList();
 
-
+           var users= _UserService.GetAllUsers().ToList();
             guna2DataGridView1.AutoGenerateColumns = true;
-            guna2DataGridView1.DataSource = Users;
+            guna2DataGridView1.DataSource = users;
             guna2DataGridView1.Refresh();
         }
 

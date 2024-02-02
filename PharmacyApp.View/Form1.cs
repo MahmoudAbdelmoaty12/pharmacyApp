@@ -92,8 +92,8 @@ namespace PharmacyApp.View
             AgeTxt.Clear();
             AddressTxt.Clear();
 
-            UI_AddMedicine uI_Add = new UI_AddMedicine(_medicineService);
-            uI_Add.Show();
+            //UI_AddMedicine uI_Add = new UI_AddMedicine();
+            //uI_Add.Show();
             
         }
     }

@@ -9,7 +9,7 @@ namespace pharmacyApp.models.DTOs
 {
     internal class OrderDto
     {
-        public int Id { get; set; }
+        
         public string UserName { get; set; }
         public string MedicinceName { get; set; }
         public DateTime date { get; set; }
