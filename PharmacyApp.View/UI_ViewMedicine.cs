@@ -1,5 +1,7 @@
 ﻿using pharmacyApp.Application.Services;
 using pharmacyApp.models.Models;
+using PharmacyApp.Context.Context;
+using PharmacyApp.Infrastructure.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,10 +17,10 @@ namespace PharmacyApp.View
     public partial class UI_ViewMedicine : UserControl
     {
         private IMedicineService _medicineService;
-        public UI_ViewMedicine(IMedicineService medicineService)
+        public UI_ViewMedicine( )
         {
             InitializeComponent();
-            _medicineService = medicineService;
+            _medicineService = new MedicineService(new MedicineRepository(new AppDbContext())); 
         }
 
         private void label1_Click(object sender, EventArgs e)

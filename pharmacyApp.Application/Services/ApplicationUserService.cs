@@ -42,9 +42,9 @@ namespace pharmacyApp.Application.Services
         public ApplicationUser UpdateUser(ApplicationUser user)
         {
 
-            var delete = _applicationUser.Update(user);
+            var update = _applicationUser.Update(user);
             _applicationUser.Save();
-            return delete;
+            return update;
         }
         public ApplicationUser GetUserName(string name)
         {

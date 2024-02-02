@@ -1,4 +1,6 @@
 ﻿using pharmacyApp.Application.Services;
+using PharmacyApp.Context.Context;
+using PharmacyApp.Infrastructure.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,13 +21,17 @@ namespace PharmacyApp.View
         {
             InitializeComponent();
             //_medicineService = medicineService;
-            //_userService = userService;
+           // _userService = new ApplicationUserService(new ApplicationUserRepository(new AppDbContext()));
+
         }
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
             //Registration re = new Registration(_UserService);
             //re.Show();
+            //this.Hide();
+            //Adminstraion adminstraion = new Adminstraion();
+            //adminstraion.Show();
             //this.Hide();
         }
 

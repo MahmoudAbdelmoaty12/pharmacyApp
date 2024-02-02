@@ -32,15 +32,20 @@ namespace PharmacyApp.View
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Adminstraion));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Adminstraion));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            updateUser1 =new UpdateUser();
+            addUser11 = new Admin.AddUser1();
+            uI__ViewUser1 = new UI__ViewUser(Users);
             panel1 = new Panel();
             label2 = new Label();
             panel3 = new Panel();
@@ -51,19 +56,18 @@ namespace PharmacyApp.View
             label1 = new Label();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
-            updateUser1 = new UpdateUser();
-            addUser11 = new Admin.AddUser1();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(64, 64, 64);
+            panel1.Controls.Add(guna2Button1);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(btnLogout);
@@ -104,7 +108,7 @@ namespace PharmacyApp.View
             btnLogout.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             btnLogout.CheckedState.FillColor = Color.White;
             btnLogout.CheckedState.ForeColor = Color.Black;
-            btnLogout.CustomizableEdges = customizableEdges1;
+            btnLogout.CustomizableEdges = customizableEdges3;
             btnLogout.DisabledState.BorderColor = Color.DarkGray;
             btnLogout.DisabledState.CustomBorderColor = Color.DarkGray;
             btnLogout.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -117,10 +121,10 @@ namespace PharmacyApp.View
             btnLogout.HoverState.ForeColor = Color.Black;
             btnLogout.Image = (Image)resources.GetObject("btnLogout.Image");
             btnLogout.ImageSize = new Size(40, 40);
-            btnLogout.Location = new Point(25, 426);
+            btnLogout.Location = new Point(25, 384);
             btnLogout.Margin = new Padding(3, 2, 3, 2);
             btnLogout.Name = "btnLogout";
-            btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnLogout.Size = new Size(197, 42);
             btnLogout.TabIndex = 5;
             btnLogout.Text = "Log out";
@@ -132,7 +136,7 @@ namespace PharmacyApp.View
             guna2Button4.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             guna2Button4.CheckedState.FillColor = Color.White;
             guna2Button4.CheckedState.ForeColor = Color.Black;
-            guna2Button4.CustomizableEdges = customizableEdges3;
+            guna2Button4.CustomizableEdges = customizableEdges5;
             guna2Button4.DisabledState.BorderColor = Color.DarkGray;
             guna2Button4.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button4.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -145,10 +149,10 @@ namespace PharmacyApp.View
             guna2Button4.HoverState.ForeColor = Color.Black;
             guna2Button4.Image = (Image)resources.GetObject("guna2Button4.Image");
             guna2Button4.ImageSize = new Size(40, 40);
-            guna2Button4.Location = new Point(25, 354);
+            guna2Button4.Location = new Point(25, 323);
             guna2Button4.Margin = new Padding(3, 2, 3, 2);
             guna2Button4.Name = "guna2Button4";
-            guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2Button4.Size = new Size(197, 42);
             guna2Button4.TabIndex = 4;
             guna2Button4.Text = "Update User";
@@ -160,7 +164,7 @@ namespace PharmacyApp.View
             viewUser.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             viewUser.CheckedState.FillColor = Color.White;
             viewUser.CheckedState.ForeColor = Color.Black;
-            viewUser.CustomizableEdges = customizableEdges5;
+            viewUser.CustomizableEdges = customizableEdges7;
             viewUser.DisabledState.BorderColor = Color.DarkGray;
             viewUser.DisabledState.CustomBorderColor = Color.DarkGray;
             viewUser.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -173,10 +177,10 @@ namespace PharmacyApp.View
             viewUser.HoverState.ForeColor = Color.Black;
             viewUser.Image = (Image)resources.GetObject("viewUser.Image");
             viewUser.ImageSize = new Size(40, 40);
-            viewUser.Location = new Point(25, 284);
+            viewUser.Location = new Point(25, 263);
             viewUser.Margin = new Padding(3, 2, 3, 2);
             viewUser.Name = "viewUser";
-            viewUser.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            viewUser.ShadowDecoration.CustomizableEdges = customizableEdges8;
             viewUser.Size = new Size(197, 42);
             viewUser.TabIndex = 3;
             viewUser.Text = "View User";
@@ -188,7 +192,7 @@ namespace PharmacyApp.View
             BtnAdduser.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             BtnAdduser.CheckedState.FillColor = Color.White;
             BtnAdduser.CheckedState.ForeColor = Color.Black;
-            BtnAdduser.CustomizableEdges = customizableEdges7;
+            BtnAdduser.CustomizableEdges = customizableEdges9;
             BtnAdduser.DisabledState.BorderColor = Color.DarkGray;
             BtnAdduser.DisabledState.CustomBorderColor = Color.DarkGray;
             BtnAdduser.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -204,7 +208,7 @@ namespace PharmacyApp.View
             BtnAdduser.Location = new Point(25, 205);
             BtnAdduser.Margin = new Padding(3, 2, 3, 2);
             BtnAdduser.Name = "BtnAdduser";
-            BtnAdduser.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            BtnAdduser.ShadowDecoration.CustomizableEdges = customizableEdges10;
             BtnAdduser.Size = new Size(197, 42);
             BtnAdduser.TabIndex = 2;
             BtnAdduser.Text = "Add User";
@@ -234,33 +238,39 @@ namespace PharmacyApp.View
             // 
             // panel2
             // 
-            panel2.Controls.Add(uI__ViewUser1);
-            panel2.Controls.Add(updateUser1);
             panel2.Controls.Add(addUser11);
+            panel2.Controls.Add(updateUser1);
+            panel2.Controls.Add(uI__ViewUser1);
             panel2.Location = new Point(242, 0);
             panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
             panel2.Size = new Size(964, 579);
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
-            // 
-            // updateUser1
-            // 
-            updateUser1.Location = new Point(-4, 0);
-            updateUser1.Margin = new Padding(3, 2, 3, 2);
-            updateUser1.Name = "updateUser1";
-            updateUser1.Size = new Size(970, 598);
-            updateUser1.TabIndex = 1;
-            // 
-            // addUser11
-            // 
-            addUser11.BackColor = SystemColors.ButtonHighlight;
-            addUser11.Font = new Font("Microsoft Sans Serif", 12F);
-            addUser11.Location = new Point(-1, -1);
-            addUser11.Margin = new Padding(4, 3, 4, 3);
+
+            //
+            //
+            //
+            //
+            //
+            addUser11.Location = new Point(3, 3);
             addUser11.Name = "addUser11";
-            addUser11.Size = new Size(964, 579);
+            addUser11.Size = new Size(1104, 764);
             addUser11.TabIndex = 0;
+            //
+            //
+            //
+            uI__ViewUser1.Location = new Point(3, 3);
+            uI__ViewUser1.Name = "uI__ViewUser1";
+            uI__ViewUser1.Size = new Size(1104, 764);
+            uI__ViewUser1.TabIndex = 1;
+            //
+            //
+            //
+            updateUser1.Location = new Point(3, 3);
+            updateUser1.Name = "updateUser1";
+            updateUser1.Size = new Size(1104, 764);
+            updateUser1.TabIndex = 2;
             // 
             // guna2Elipse1
             // 
@@ -273,6 +283,34 @@ namespace PharmacyApp.View
             // guna2Elipse3
             // 
             guna2Elipse3.TargetControl = panel2;
+            // 
+            // guna2Button1
+            // 
+            guna2Button1.BorderThickness = 2;
+            guna2Button1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            guna2Button1.CheckedState.FillColor = Color.White;
+            guna2Button1.CheckedState.ForeColor = Color.Black;
+            guna2Button1.CustomizableEdges = customizableEdges1;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.FillColor = Color.FromArgb(64, 64, 64);
+            guna2Button1.Font = new Font("Segoe UI", 9F);
+            guna2Button1.ForeColor = Color.White;
+            guna2Button1.HoverState.BorderColor = Color.White;
+            guna2Button1.HoverState.FillColor = Color.FromArgb(0, 118, 225);
+            guna2Button1.HoverState.ForeColor = Color.Black;
+            guna2Button1.Image = (Image)resources.GetObject("guna2Button1.Image");
+            guna2Button1.ImageSize = new Size(40, 40);
+            guna2Button1.Location = new Point(25, 447);
+            guna2Button1.Margin = new Padding(3, 2, 3, 2);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Button1.Size = new Size(197, 42);
+            guna2Button1.TabIndex = 6;
+            guna2Button1.Text = "Pharmacy";
+            guna2Button1.Click += guna2Button1_Click_1;
             // 
             // Adminstraion
             // 
@@ -292,7 +330,6 @@ namespace PharmacyApp.View
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -314,5 +351,6 @@ namespace PharmacyApp.View
         private Admin.AddUser1 addUser11;
         private UpdateUser updateUser1;
         private UI__ViewUser uI__ViewUser1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

@@ -19,10 +19,10 @@ namespace PharmacyApp.View
     public partial class UI_AddMedicine : UserControl
     {
         private IMedicineService _medicineService;
-        public UI_AddMedicine(IMedicineService medicineService)
+        public UI_AddMedicine()
         {
             InitializeComponent();
-            _medicineService = medicineService;
+            _medicineService = new MedicineService(new MedicineRepository(new AppDbContext())); 
         }
 
         private void UI_AddMedicine_Load(object sender, EventArgs e)

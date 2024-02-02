@@ -1,5 +1,7 @@
 ﻿using pharmacyApp.Application.Services;
 using pharmacyApp.models.Models;
+using PharmacyApp.Context.Context;
+using PharmacyApp.Infrastructure.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +20,7 @@ namespace PharmacyApp.View.Admin
         public AddUser1()
         {
             InitializeComponent();
-
+            _userService =new ApplicationUserService(new ApplicationUserRepository(new AppDbContext()));
         }
 
 
