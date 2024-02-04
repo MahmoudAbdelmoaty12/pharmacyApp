@@ -124,6 +124,7 @@ namespace PharmacyApp.View
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            int ID = int.Parse(guna2TextBox1.Text);
             string name = guna2TextBox2.Text;
             int tapes = int.Parse(guna2TextBox3.Text);
             DateTime valid = guna2DateTimePicker1.Value;
@@ -133,6 +134,7 @@ namespace PharmacyApp.View
 
             Medicincs medicincs = new Medicincs()
             {
+                Id=ID,
                 Name = name,
                 Tapes = tapes,
                 ProductionDate = valid,

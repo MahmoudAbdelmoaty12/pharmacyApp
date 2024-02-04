@@ -45,11 +45,12 @@ namespace PharmacyApp.View
             string Phone = Phonetxt.Text;
             string Address = Addresstxt.Text;
             string? userType = guna2ComboBox1.SelectedItem?.ToString();
-            bool IsID = _userService.GetUser(ID) != null;
-            if (IsID)
+            ApplicationUser IsID = _userService.GetUser(ID) ;
+            if (IsID!=null)
             {
                 ApplicationUser UpdateUser = new ApplicationUser
                 {
+                    Id=ID,
                     Name = Name,
                     Email = Email,
                     Password = Password,
