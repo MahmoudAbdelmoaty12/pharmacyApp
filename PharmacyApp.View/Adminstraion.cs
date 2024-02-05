@@ -34,7 +34,8 @@ namespace PharmacyApp.View
             InitializeComponent();
             _applicationUserService = registration._applicationUserService;
             this.Users = _applicationUserService.GetAllUsers().ToHashSet();
-          
+            //uI__ViewUser1 = new UI__ViewUser(Users);
+           uI__ViewUser1._Users = this.Users;
         }
 
         private void guna2Button5_Click(object sender, EventArgs e)
