@@ -253,6 +253,9 @@ namespace PharmacyApp.View
             // 
             // panel2
             // 
+            panel2.Controls.Add(addUser11);
+            panel2.Controls.Add(uI__ViewUser1);
+            panel2.Controls.Add(updateUser1);
             panel2.Location = new Point(212, 0);
             panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
@@ -270,7 +273,7 @@ namespace PharmacyApp.View
             // uI_ViewMedicine1
             // 
             uI__ViewUser1.Location = new Point(3, 3);
-            uI__ViewUser1.Name = "uI_ViewMedicine1";
+            uI__ViewUser1.Name = "uI__ViewUser1";
             uI__ViewUser1.Size = new Size(1104, 762);
             uI__ViewUser1.TabIndex = 1;
             //uI__ViewUser1.Load+=load
