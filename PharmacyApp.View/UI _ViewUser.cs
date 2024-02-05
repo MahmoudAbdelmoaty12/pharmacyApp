@@ -18,7 +18,7 @@ namespace PharmacyApp.View
 {
     public partial class UI__ViewUser : UserControl
     {
-        HashSet<ApplicationUser> _Users;
+        public HashSet<ApplicationUser> _Users;
         public event EventHandler<int> UserIdSent;
         IApplicationUserService _UserService;
         public UI__ViewUser(HashSet<ApplicationUser> Users)
@@ -72,7 +72,7 @@ namespace PharmacyApp.View
         {
             if (guna2DataGridView1.SelectedRows.Count > 0)
             {
-                DialogResult result = MessageBox.Show("Are you sure you want to delete this medicine?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult result = MessageBox.Show("Are you sure you want to delete this user?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 if (result == DialogResult.Yes)
                 {
