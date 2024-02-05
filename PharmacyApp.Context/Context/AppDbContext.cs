@@ -20,6 +20,8 @@ namespace PharmacyApp.Context.Context
         {
             optionsBuilder.UseSqlServer("Data Source=DESKTOP-UVNJS3F\\SQLEXPRESS01;Initial Catalog=ITi_pharmacy;Integrated Security=True;Encrypt=false");
 
+            optionsBuilder.UseSqlServer("Data Source=(localdb)\\mssqllocaldb;Initial Catalog=PharmacyApp;Integrated Security=True;Encrypt=False");
+           // optionsBuilder.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
             base.OnConfiguring(optionsBuilder);
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -28,8 +30,8 @@ namespace PharmacyApp.Context.Context
             modelBuilder.ApplyConfiguration(new MedicinesConfigration());
             modelBuilder.ApplyConfiguration(new OrdersConfigration());
             modelBuilder.ApplyConfiguration(new CompanyConfigration());
-
-            
+            //modelBuilder.UseChangeTrackingStrategy(QueryTrackingBehavior.NoTracking);
+           // ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
             base.OnModelCreating(modelBuilder);
         }
 

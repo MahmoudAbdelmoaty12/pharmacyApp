@@ -27,9 +27,14 @@ namespace PharmacyApp.Infrastructure.Repositories
           return  _entity.Add(entity).Entity;
         }
 
-        public void Delete(T entity)
+        public void Delete(T entity) 
         {
-           _entity.Remove(entity);
+          var delete= _entity.Remove(entity);
+            //if (entity != null)
+            //{
+            //    Save();
+            //    _context.Entry(delete).State = EntityState.Detached;
+            //}
         }
 
         public T DeleteById(T entity)
@@ -62,12 +67,24 @@ namespace PharmacyApp.Infrastructure.Repositories
 
         public IQueryable<T> GetAll()
         {
-            return _entity;
+            var all= _entity;
+           // Save();
+           // _context.Entry(_entity).State = EntityState.Detached;
+            return all;
         }
 
         public T GetById(TId id)
         {
-            return _entity.Find(id);
+            var entity = _entity.Find(id);
+
+            if (entity != null)
+            {
+                Save();
+                _context.Entry(entity).State = EntityState.Detached;
+            }
+
+            return entity;
+
         }
 
         public T GetByName(string name)
@@ -83,7 +100,11 @@ namespace PharmacyApp.Infrastructure.Repositories
 
         public T Update(T entity)
         {
-          return  _entity.Update(entity).Entity;
+           var up= _entity.Update(entity).Entity;
+            Save();
+            _context.Entry(entity).State =EntityState.Detached;
+            return up;
+
         }
     }
 }

@@ -34,6 +34,7 @@ namespace PharmacyApp.View
             InitializeComponent();
             _applicationUserService = registration._applicationUserService;
             this.Users = _applicationUserService.GetAllUsers().ToHashSet();
+            uI__ViewUser1._Users = this.Users;
           
         }
 
@@ -79,7 +80,7 @@ namespace PharmacyApp.View
             addUser11.Visible = false;
             uI__ViewUser1.Visible = false;
             updateUser1.Visible = false;
-           
+            uI__ViewUser1.UserIdSent += ChildForm_DataSent;
             BtnAdduser.PerformClick();
 
         }
