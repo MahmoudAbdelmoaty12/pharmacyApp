@@ -24,7 +24,7 @@ namespace PharmacyApp.View
         private HashSet<ApplicationUser> Users { get; set; }
        
 
-        private int WhichUi { get; set; }
+        
 
 
 
