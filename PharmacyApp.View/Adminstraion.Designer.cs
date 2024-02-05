@@ -72,8 +72,9 @@ namespace PharmacyApp.View
             panel1.Controls.Add(label1);
             panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(-2, -1);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(275, 773);
+            panel1.Size = new Size(241, 580);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
@@ -96,20 +97,21 @@ namespace PharmacyApp.View
             guna2Button1.HoverState.ForeColor = Color.Black;
             guna2Button1.Image = (Image)resources.GetObject("guna2Button1.Image");
             guna2Button1.ImageSize = new Size(40, 40);
-            guna2Button1.Location = new Point(25, 388);
+            guna2Button1.Location = new Point(22, 374);
             guna2Button1.Margin = new Padding(3, 2, 3, 2);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button1.Size = new Size(197, 42);
+            guna2Button1.Size = new Size(172, 32);
             guna2Button1.TabIndex = 6;
             guna2Button1.Text = "Pharmacy";
             guna2Button1.Click += guna2Button1_Click_1;
             // 
             // panel3
             // 
-            panel3.Location = new Point(281, 29);
+            panel3.Location = new Point(246, 22);
+            panel3.Margin = new Padding(3, 2, 3, 2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1102, 772);
+            panel3.Size = new Size(964, 579);
             panel3.TabIndex = 1;
             // 
             // btnLogout
@@ -131,11 +133,11 @@ namespace PharmacyApp.View
             btnLogout.HoverState.ForeColor = Color.Black;
             btnLogout.Image = (Image)resources.GetObject("btnLogout.Image");
             btnLogout.ImageSize = new Size(40, 40);
-            btnLogout.Location = new Point(25, 445);
+            btnLogout.Location = new Point(22, 423);
             btnLogout.Margin = new Padding(3, 2, 3, 2);
             btnLogout.Name = "btnLogout";
             btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnLogout.Size = new Size(197, 42);
+            btnLogout.Size = new Size(172, 32);
             btnLogout.TabIndex = 5;
             btnLogout.Text = "Log out";
             btnLogout.Click += guna2Button5_Click;
@@ -159,11 +161,11 @@ namespace PharmacyApp.View
             guna2Button4.HoverState.ForeColor = Color.Black;
             guna2Button4.Image = (Image)resources.GetObject("guna2Button4.Image");
             guna2Button4.ImageSize = new Size(40, 40);
-            guna2Button4.Location = new Point(25, 323);
+            guna2Button4.Location = new Point(22, 328);
             guna2Button4.Margin = new Padding(3, 2, 3, 2);
             guna2Button4.Name = "guna2Button4";
             guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button4.Size = new Size(197, 42);
+            guna2Button4.Size = new Size(172, 32);
             guna2Button4.TabIndex = 4;
             guna2Button4.Text = "Update User";
             guna2Button4.Click += guna2Button4_Click;
@@ -187,11 +189,11 @@ namespace PharmacyApp.View
             viewUser.HoverState.ForeColor = Color.Black;
             viewUser.Image = (Image)resources.GetObject("viewUser.Image");
             viewUser.ImageSize = new Size(40, 40);
-            viewUser.Location = new Point(25, 263);
+            viewUser.Location = new Point(22, 272);
             viewUser.Margin = new Padding(3, 2, 3, 2);
             viewUser.Name = "viewUser";
             viewUser.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            viewUser.Size = new Size(197, 42);
+            viewUser.Size = new Size(172, 32);
             viewUser.TabIndex = 3;
             viewUser.Text = "View User";
             viewUser.Click += guna2Button3_Click;
@@ -215,10 +217,11 @@ namespace PharmacyApp.View
             BtnAdduser.HoverState.ForeColor = Color.Black;
             BtnAdduser.Image = (Image)resources.GetObject("BtnAdduser.Image");
             BtnAdduser.ImageSize = new Size(40, 40);
-            BtnAdduser.Location = new Point(29, 258);
+            BtnAdduser.Location = new Point(22, 219);
+            BtnAdduser.Margin = new Padding(3, 2, 3, 2);
             BtnAdduser.Name = "BtnAdduser";
             BtnAdduser.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            BtnAdduser.Size = new Size(197, 42);
+            BtnAdduser.Size = new Size(172, 32);
             BtnAdduser.TabIndex = 2;
             BtnAdduser.Text = "Add User";
             BtnAdduser.Click += BtnAdduser_Click;
@@ -228,28 +231,29 @@ namespace PharmacyApp.View
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(48, 213);
+            label1.Location = new Point(42, 160);
             label1.Name = "label1";
-            label1.Size = new Size(165, 31);
+            label1.Size = new Size(136, 25);
             label1.TabIndex = 1;
             label1.Text = "Administrator";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(48, 19);
+            pictureBox1.Location = new Point(42, 14);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(183, 173);
+            pictureBox1.Size = new Size(160, 130);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
             // panel2
             // 
-            panel2.Location = new Point(242, 0);
+            panel2.Location = new Point(212, 0);
             panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1102, 772);
+            panel2.Size = new Size(964, 579);
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
             // 
@@ -267,12 +271,13 @@ namespace PharmacyApp.View
             // 
             // Adminstraion
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1381, 768);
+            ClientSize = new Size(1208, 576);
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Adminstraion";

@@ -31,9 +31,7 @@ namespace PharmacyApp.View
         //}
         private void guna2Button5_Click(object sender, EventArgs e)
         {
-            Adminstraion adminstraion = new Adminstraion();
-            adminstraion.Show();
-            adminstraion.Hide();
+          
             //Registration re = new Registration(_UserService);
             //re.Show();
             //this.Hide();
