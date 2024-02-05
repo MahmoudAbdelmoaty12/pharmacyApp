@@ -36,8 +36,7 @@ namespace PharmacyApp.View
         //}
         private void LoadUserData()
         {
-            // var Users = _Users.ToList();
-
+    
            var users= _UserService.GetAllUsers().ToList();
             guna2DataGridView1.AutoGenerateColumns = true;
             guna2DataGridView1.DataSource = users;
@@ -64,7 +63,6 @@ namespace PharmacyApp.View
         }
         public void ChildForm_UserIdSent(object sender, int value)
         {
-            // Handle the received value here
             MessageBox.Show("Received value: " + value);
         }
 
@@ -79,11 +77,8 @@ namespace PharmacyApp.View
 
                     var selectedUser = guna2DataGridView1.SelectedRows[0];
                     var UserId = (int)selectedUser.Cells[0].Value;
-                    //ApplicationUser user = new()
-                    //{
-                    //    selectedUser.Cells[0].Value,
-                    //}
-                    //_Users.Remove(selectedUser);
+                  
+
 
 
                     if (UserIdSent != null)
