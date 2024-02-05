@@ -43,6 +43,9 @@ namespace PharmacyApp.View
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            uI__ViewUser1 = new UI__ViewUser(Users);
+            addUser11 = new Admin.AddUser1();
+            updateUser1 = new UpdateUser();
             panel1 = new Panel();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             panel3 = new Panel();
