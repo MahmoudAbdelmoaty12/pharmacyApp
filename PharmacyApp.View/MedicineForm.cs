@@ -28,7 +28,7 @@ namespace PharmacyApp.View
             // Create an instance of UI_AddMedicine
             //var uiviewuser = new UI__ViewUser(new ApplicationUserService(new ApplicationUserRepository(new AppDbContext())));
             var uiAddMedicine = new UI_AddMedicine(new MedicineService(new MedicineRepository(new AppDbContext())));
-            var iuviewmedicine= new UI_ViewMedicine(new MedicineService(new MedicineRepository(new AppDbContext())));
+            var iuviewmedicine = new UI_ViewMedicine(new MedicineService(new MedicineRepository(new AppDbContext())));
             var uimodify = new UI_Modify(new MedicineService(new MedicineRepository(new AppDbContext())));
             // Set the properties of uiAddMedicine as needed
             uiAddMedicine.Dock = DockStyle.Fill;
@@ -38,6 +38,13 @@ namespace PharmacyApp.View
 
             // Add uiAddMedicine to the controls of MedicineForm
             //this.Controls.Add(uiviewuser);
+        }
+
+        private void AddtoCartbutton_Click(object sender, EventArgs e)
+        {
+            OrderMedicine orderMedicine = new OrderMedicine();
+            orderMedicine.Show();
+            
         }
     }
 }

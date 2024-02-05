@@ -1,4 +1,6 @@
+﻿using System.Runtime.Serialization;
 using pharmacyApp.Application.Contract;
+using pharmacyApp.Application.Service;
 using pharmacyApp.Application.Services;
 using PharmacyApp.Context.Context;
 using PharmacyApp.Infrastructure.Repositories;
@@ -14,7 +16,7 @@ namespace PharmacyApp.View
 
         static void Main()
         {
-            
+
             ApplicationConfiguration.Initialize();
             //  Application.EnableVisualStyles();
             //  Application.SetCompatibleTextRenderingDefault(false);
@@ -36,9 +38,18 @@ namespace PharmacyApp.View
             //Application.Run(new Form1(new ApplicationUserService(new ApplicationUserRepository(new AppDbContext()))));
             //Application.Run( new UI_AddMedicine(new MedicineService(new MedicineRepository(new AppDbContext()))));
             //Application.Run(new MedicineForm());
-           Application.Run(new Registration(new ApplicationUserService(new ApplicationUserRepository(new AppDbContext()))));
+            Application.Run(new Registration(new ApplicationUserService(new ApplicationUserRepository(new AppDbContext()))));
+            // Initialize the services
+            // Initialize the services
+            
+           
+            //Application.Run(new OrderMedicin());
 
-            //Application.Run(new Pharmacy());
+
+
+
+
+
         }
     }
-}
+    }

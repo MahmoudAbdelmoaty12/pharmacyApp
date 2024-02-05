@@ -16,6 +16,7 @@ namespace pharmacyApp.models.Models
     {
         public int Id { get; set; }
         public ApplicationUser? User { get; set; }
+       
         public Medicincs? medicince { get; set; } 
         public DateTime date { get; set; }
         public string? AddressUser { get; set; }

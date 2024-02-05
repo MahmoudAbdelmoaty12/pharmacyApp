@@ -65,11 +65,11 @@ namespace PharmacyApp.View
                             MessageBox.Show("Wrong Login Please Enter right Email and Password");
                         }
                     }
-                    else
+                    else if(res.Type==ApplicationUserType.user)
                     {
                         if (res.Password == TextPassword.Text)
                         {
-                            Pharmacy f = new Pharmacy();
+                           OrderMedicin f = new OrderMedicin(res);
                             f.Show();
                             this.Hide();
                         }

@@ -39,16 +39,16 @@ namespace PharmacyApp.View
             InitializeComponent();
             _applicationUserService = registration._applicationUserService;
             this.Users = _applicationUserService.GetAllUsers().ToHashSet();
-             this.uI = new UI__ViewUser(Users);
+            this.uI = new UI__ViewUser(Users);
             this.AddUserUI = new AddUser1();
             this.UpdateUserUI = new UpdateUser();
-           // _applicationUserService = applicationUserService;
+            // _applicationUserService = applicationUserService;
             //this.registration = registration;
 
             //applicationUserService = new ApplicationUserService(new ApplicationUserService()); 
             //this.Load += Adminstraion_Load;
         }
-       
+
         private void guna2Button5_Click(object sender, EventArgs e)
         {
             //if (_applicationUserService != null)
@@ -81,7 +81,7 @@ namespace PharmacyApp.View
 
             this.AddUserUI.Visible = true;
 
-           
+
             this.AddUserUI.BringToFront();
 
 
@@ -107,15 +107,15 @@ namespace PharmacyApp.View
             //this.Controls.Add(this.AddUserUI);
             //this.WhichUi = 1;
 
-            if (this.WhichUi == 0 )
+            if (this.WhichUi == 0)
             {
                 uI.UserIdSent += ChildForm_DataSent;
-                this.uI.Visible = true; 
+                this.uI.Visible = true;
                 this.uI.Dock = DockStyle.Right;
                 this.Controls.Add(this.uI);
 
             }
-            else if(this.WhichUi == 1 ) 
+            else if (this.WhichUi == 1)
             {
                 AddUserUI.ApplicationUserSent += ChildForm_ApplicationUserSent;
                 this.AddUserUI.Visible = true;
@@ -123,9 +123,9 @@ namespace PharmacyApp.View
                 this.Controls.Add(this.AddUserUI);
 
             }
-            else if(this.WhichUi == 2)
+            else if (this.WhichUi == 2)
             {
-               
+
                 this.UpdateUserUI.Visible = true;
                 this.UpdateUserUI.Dock = DockStyle.Right;
                 this.Controls.Add(this.UpdateUserUI);
@@ -138,7 +138,7 @@ namespace PharmacyApp.View
         {
             // Handle the data received from the child form
             //MessageBox.Show($"Data received from child form: {data}");
-            var DeletedUser =_applicationUserService.GetUser(data);
+            var DeletedUser = _applicationUserService.GetUser(data);
             _applicationUserService.DeleteUser(DeletedUser);
 
 
@@ -164,7 +164,7 @@ namespace PharmacyApp.View
             this.WhichUi = 0;
             this.uI.Visible = true;
             this.uI.BringToFront();
-           
+
         }
         private void addUser11_Load(object sender, EventArgs e)
         {
@@ -193,11 +193,17 @@ namespace PharmacyApp.View
             this.WhichUi = 2;
             updateUser1.Visible = true;
             updateUser1.BringToFront();
-            
+
 
 
         }
 
+        private void guna2Button1_Click_1(object sender, EventArgs e)
+        {
+            OrderMedicine orderMedicine = new OrderMedicine();
+            orderMedicine.Show();
+            this.Hide();
 
+        }
     }
 }

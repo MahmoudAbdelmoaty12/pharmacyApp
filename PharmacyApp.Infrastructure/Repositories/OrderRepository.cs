@@ -9,7 +9,7 @@ using PharmacyApp.Context.Context;
 
 namespace PharmacyApp.Infrastructure.Repositories
 {
-    internal class OrderRepository:Repository<Order,int>,IOrder
+    public class OrderRepository:Repository<Order,int>,IOrder
     {
 
         public OrderRepository(AppDbContext context)

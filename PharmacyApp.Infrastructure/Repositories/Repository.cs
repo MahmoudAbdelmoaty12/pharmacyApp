@@ -72,7 +72,9 @@ namespace PharmacyApp.Infrastructure.Repositories
 
         public T GetByName(string name)
         {
+
             return _context.Set<T>().Find(name);
+            
         }
 
         public void Save()

@@ -11,5 +11,6 @@ namespace pharmacyApp.Application.Contract
     {
         public ProducingCompany GetProducingCompany(int MedicineId);
         public bool IsMedicineValid(Medicincs medicincs);
+     
     }
 }
