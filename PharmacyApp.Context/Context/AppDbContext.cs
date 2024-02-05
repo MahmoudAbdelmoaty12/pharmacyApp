@@ -22,6 +22,8 @@ namespace PharmacyApp.Context.Context
 
             optionsBuilder.UseSqlServer("Data Source=(localdb)\\mssqllocaldb;Initial Catalog=PharmacyApp;Integrated Security=True;Encrypt=False");
            // optionsBuilder.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+            optionsBuilder.UseSqlServer("Data Source=DESKTOP-3LOCF94\\SQLEXPRESS;Initial Catalog=PharmacyApp;Integrated Security=True;Encrypt=False");
+           // optionsBuilder.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
             base.OnConfiguring(optionsBuilder);
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
