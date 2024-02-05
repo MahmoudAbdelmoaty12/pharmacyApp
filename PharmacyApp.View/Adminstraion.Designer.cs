@@ -260,6 +260,28 @@ namespace PharmacyApp.View
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
             // 
+            // addUser11
+            // 
+            addUser11.Location = new Point(3, 3);
+            addUser11.Name = "addUser11";
+            addUser11.Size = new Size(1104, 764);
+            addUser11.TabIndex = 0;
+            // 
+            // uI_ViewMedicine1
+            // 
+            uI__ViewUser1.Location = new Point(3, 3);
+            uI__ViewUser1.Name = "uI_ViewMedicine1";
+            uI__ViewUser1.Size = new Size(1104, 762);
+            uI__ViewUser1.TabIndex = 1;
+            //uI__ViewUser1.Load+=load
+            // 
+            // updateUser1
+            // 
+            updateUser1.Location = new Point(3, 3);
+            updateUser1.Name = "updateUser1";
+            updateUser1.Size = new Size(1098, 762);
+            updateUser1.TabIndex = 2;
+            // 
             // guna2Elipse1
             // 
             guna2Elipse1.TargetControl = panel2;
