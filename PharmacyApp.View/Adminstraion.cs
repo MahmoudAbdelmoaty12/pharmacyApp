@@ -22,33 +22,22 @@ namespace PharmacyApp.View
 
         private IApplicationUserService _applicationUserService;
         private HashSet<ApplicationUser> Users { get; set; }
-        public UI__ViewUser uI { get; set; }
-        public AddUser1 AddUserUI { get; set; }
-        public UpdateUser UpdateUserUI { get; set; }
-
+       
 
         private int WhichUi { get; set; }
 
 
 
-        //UI__ViewUser uI = new UI__ViewUser(Users.ToHashSet());
-        // Registration registration //new Registration(new ApplicationUserService(new ApplicationUserRepository(new AppDbContext())));
-        //UI__ViewUser uI;
+     
         public Adminstraion(Registration registration)
         {
             InitializeComponent();
             _applicationUserService = registration._applicationUserService;
             this.Users = _applicationUserService.GetAllUsers().ToHashSet();
-             this.uI = new UI__ViewUser(Users);
-            this.AddUserUI = new AddUser1();
-            this.UpdateUserUI = new UpdateUser();
-           // _applicationUserService = applicationUserService;
-            //this.registration = registration;
-
-            //applicationUserService = new ApplicationUserService(new ApplicationUserService()); 
-            //this.Load += Adminstraion_Load;
+            //uI__ViewUser1 = new UI__ViewUser(Users);
+           uI__ViewUser1._Users = this.Users;
         }
-       
+
         private void guna2Button5_Click(object sender, EventArgs e)
         {
             //if (_applicationUserService != null)
@@ -72,18 +61,11 @@ namespace PharmacyApp.View
 
         private void BtnAdduser_Click(object sender, EventArgs e)
         {
-            this.WhichUi = 1;
-            //this.uI.Visible = false;
-            //addUser11.Visible = true;
-            //addUser11.BringToFront();
-            this.uI.Visible = false;
-            this.UpdateUserUI.Visible = false;
-
-            this.AddUserUI.Visible = true;
-
            
-            this.AddUserUI.BringToFront();
+            addUser11.Visible = true;
+            addUser11.BringToFront();
 
+    
 
         }
 
@@ -94,55 +76,22 @@ namespace PharmacyApp.View
 
         private void Adminstraion_Load(object sender, EventArgs e)
         {
-            //var uiviewuser = new UI__ViewUser(Users);
-
-            this.UpdateUserUI.Visible = false;
-            //viewUser1.Visible = false;
-            this.AddUserUI.Visible = false;
-            this.uI.Visible = false;
+          
+            addUser11.Visible = false;
+            uI__ViewUser1.Visible = false;
+            updateUser1.Visible = false;
+           
             BtnAdduser.PerformClick();
-            guna2Button4.PerformClick();
-            viewUser.PerformClick();
-            //AddUserUI.OnAddUser1 += ChildForm_ApplicationUserSent;
-            //this.Controls.Add(this.AddUserUI);
-            //this.WhichUi = 1;
-
-            if (this.WhichUi == 0 )
-            {
-                uI.UserIdSent += ChildForm_DataSent;
-                this.uI.Visible = true; 
-                this.uI.Dock = DockStyle.Right;
-                this.Controls.Add(this.uI);
-
-            }
-            else if(this.WhichUi == 1 ) 
-            {
-                AddUserUI.ApplicationUserSent += ChildForm_ApplicationUserSent;
-                this.AddUserUI.Visible = true;
-                this.AddUserUI.Dock = DockStyle.Right;
-                this.Controls.Add(this.AddUserUI);
-
-            }
-            else if(this.WhichUi == 2)
-            {
-               
-                this.UpdateUserUI.Visible = true;
-                this.UpdateUserUI.Dock = DockStyle.Right;
-                this.Controls.Add(this.UpdateUserUI);
-            }
-
-
 
         }
         private void ChildForm_DataSent(object sender, int data)
         {
-            // Handle the data received from the child form
-            //MessageBox.Show($"Data received from child form: {data}");
-            var DeletedUser =_applicationUserService.GetUser(data);
+            
+            var DeletedUser = _applicationUserService.GetUser(data);
             _applicationUserService.DeleteUser(DeletedUser);
 
 
-            // Optionally, you can perform further processing with the data
+           
         }
         private void ChildForm_ApplicationUserSent(object sender, ApplicationUser data)
         {
@@ -157,14 +106,9 @@ namespace PharmacyApp.View
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            //viewUser1.Visible = true;
-            //viewUser1.BringToFront();
-            this.AddUserUI.Visible = false;
-            this.UpdateUserUI.Visible = false;
-            this.WhichUi = 0;
-            this.uI.Visible = true;
-            this.uI.BringToFront();
-           
+            uI__ViewUser1.Visible = true;
+            uI__ViewUser1.BringToFront();
+     
         }
         private void addUser11_Load(object sender, EventArgs e)
         {
@@ -188,16 +132,18 @@ namespace PharmacyApp.View
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
-            this.uI.Visible = false;
-            this.AddUserUI.Visible = false;
-            this.WhichUi = 2;
+          
             updateUser1.Visible = true;
             updateUser1.BringToFront();
-            
-
+           
 
         }
 
-
+        private void guna2Button1_Click_1(object sender, EventArgs e)
+        {
+            Pharmacy pharmacy = new Pharmacy();
+            pharmacy.Show();
+            this.Hide();
+        }
     }
 }
