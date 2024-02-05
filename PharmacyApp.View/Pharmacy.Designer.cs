@@ -72,6 +72,7 @@ namespace PharmacyApp.View
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
             panel1.Size = new Size(314, 1040);
+            panel1.Size = new Size(314, 1024);
             panel1.TabIndex = 0;
             // 
             // guna2Button5
@@ -92,7 +93,8 @@ namespace PharmacyApp.View
             guna2Button5.Location = new Point(53, 847);
             guna2Button5.Margin = new Padding(3, 4, 3, 4);
             guna2Button5.Name = "guna2Button5";
-            guna2Button5.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2Button5.ShadowDecoration.CustomizableEdges =customizableEdges10;
+            
             guna2Button5.Size = new Size(206, 60);
             guna2Button5.TabIndex = 4;
             guna2Button5.Text = "Log Out";
@@ -116,7 +118,11 @@ namespace PharmacyApp.View
             guna2Button4.Location = new Point(49, 736);
             guna2Button4.Margin = new Padding(3, 4, 3, 4);
             guna2Button4.Name = "guna2Button4";
+
             guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges12;
+
+            //guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges4;
+
             guna2Button4.Size = new Size(206, 60);
             guna2Button4.TabIndex = 3;
             guna2Button4.Text = "Modify Medicine";
@@ -140,7 +146,11 @@ namespace PharmacyApp.View
             guna2Button3.Location = new Point(53, 628);
             guna2Button3.Margin = new Padding(3, 4, 3, 4);
             guna2Button3.Name = "guna2Button3";
+
             guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges14;
+
+            //guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges6;
+
             guna2Button3.Size = new Size(206, 60);
             guna2Button3.TabIndex = 2;
             guna2Button3.Text = "View  Medicine";
@@ -164,7 +174,11 @@ namespace PharmacyApp.View
             Btn_addmedicine.Location = new Point(53, 519);
             Btn_addmedicine.Margin = new Padding(3, 4, 3, 4);
             Btn_addmedicine.Name = "Btn_addmedicine";
+
             Btn_addmedicine.ShadowDecoration.CustomizableEdges = customizableEdges16;
+
+            //Btn_addmedicine.ShadowDecoration.CustomizableEdges = customizableEdges8;
+
             Btn_addmedicine.Size = new Size(206, 60);
             Btn_addmedicine.TabIndex = 1;
             Btn_addmedicine.Text = "Add  Medicine";
@@ -198,7 +212,11 @@ namespace PharmacyApp.View
             // 
             // panel2
             // 
+
             panel2.Location = new Point(312, 0);
+
+            panel2.Location = new Point(311, 0);
+
             panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
             panel2.Size = new Size(1262, 1027);
